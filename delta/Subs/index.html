@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c9d22a1e3d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="subscribe.css">
+    <title>Delta Fitness Studio</title>
+</head>
+
+<body>
+
+    <!-- navbar container here --- maintain-->
+    <div class="navbar-container">
+        <div class="logo">
+            <a href="../landing-page/index.html"></a>
+        <!-- <b>DELTA Fitness Studio</b> -->
+        </div>
+        <div class="tab">
+            <ul class="tab-contents">
+                <li><a target="_self" href="../landing-page/index.html">Home</a></li>
+                <li><a target="_self" href="../Subs/index.html">Subscription</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a target="_self" href="#">About</a></li>
+            </ul>
+        </div>
+
+        <div class="sign-in">
+            <a onclick="openSignInModal()" href="#">Sign in</a>
+        </div>
+    </div>
+
+
+    <!-- hidden sign in container -- maintain -->
+    <div class="sign-up-container">
+        <div id="signin-bg" class="black-overlay">
+
+        </div>
+        <div id="signin-modal" class="signin-content">
+            <div class="close-btn">
+                <i id="closeBtn" onclick="closeSignInModal()" class="fa fa-close fa-2x"></i>
+            </div>
+            <div class="container">
+                <div class="blueBg">
+
+                    <div class="box signin">
+                        <h2>Already Have an Account?</h2>
+                        <button class="signinBtn">Sign In</button>
+                    </div>
+                    <div class="box signup">
+                        <h2>Don't Have an Account?</h2>
+                        <button class="signupBtn">Sign Up</button>
+                    </div>
+                </div>
+                <div class="formBox">
+                    <div class="form signinForm">
+                        <form action="">
+                            <h3>Sign In</h3>
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="submit" value="Log In">
+                        </form>
+                    </div>
+
+                    <div class="form signupForm">
+                        <form action="">
+                            <h3>Sign Up</h3>
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="submit" value="Register">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- scroll to top button -- maintain -->
+    <div class="scroll-to-top">
+        <button onclick="scrollToTop()" id="scroll-btn">
+            <i class="fa fa-angle-up fa-2x"></i>
+        </button>
+    </div>
+    <div id = "subBody">
+        <a class = "subTopic" onclick="switchTopicTrain()" id = "train" style="color: white;" >TRAINING</a>
+        <a class = "subTopic" id = "eat" onclick="switchTopicEat()">DIETS</a>
+    </div>
+    <div class = "parentOfSub" id = "parentTrain">
+        
+        <div id = "availableOffers">
+            <div id = "offer_1" class = "offer">
+                <div class = "topHalf"></div>
+                <div class="comments">
+                    <div class="price">
+                        GHC 10.00 
+                    </div>
+                    <div class = "duration">
+                        A WEEK
+                    </div>
+                    This includes : </br></br>
+                    Two classes per week </br>
+                    Recuring subscription </br>
+                    Unlimited Trainer Assistance
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+            </div>
+            <div id = "offer_2" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  25.00 
+                    </div>
+                    <div class = "duration">
+                        A WEEK
+                    </div>
+                    This includes : </br></br>
+                    Three classes per week </br>
+                    Recuring subscription </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+        
+            </div>
+            <div id = "offer_3" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  45.00 
+                    </div>
+                    <div class = "duration">
+                        A WEEK
+                    </div>
+                    This includes : </br></br>
+                    Four classes per week </br>
+                    Recuring subscription </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_4" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  100.00 
+                    </div>
+                    <div class = "duration">
+                        A MONTH
+                    </div>
+                    This includes : </br></br>
+                    Twelve classes per month </br>
+                    Three classes per week </br>
+                    Unlimited Trainer Assistance
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_5" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  30.00 
+                    </div>
+                    <div class = "duration">
+                        A MONTH
+                    </div>
+                    This includes : </br></br>
+                    Four classes per month </br>
+                    One class per week </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_6" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  20.00 
+                    </div>
+                    <div class = "duration">
+                        A MONTH
+                    </div>
+                    This includes : </br></br>
+                    Eight classes per month </br>
+                    Two classes per week </br>
+                    Recuring subscription </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_7" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  10.00 
+                    </div>
+                    <div class = "duration">
+                        This is for those who </br> 
+                        just want to test it out
+                    </div>
+                    This includes : </br></br>
+                    Two classes per week </br>
+                    Recuring subscription </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+            
+            </div>
+            <div id = "offer_8" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  200.00 
+                    </div>
+                    <div class = "duration">
+                        THREE MONTHS
+                    </div>
+                    This includes : </br></br>
+                    Unlimited Classes </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+            
+            </div>
+            <div id = "offer_9" class = "offer">
+                <div class = "topHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  500.00 
+                    </div>
+                    <div class = "duration">
+                        SIX MONTHS
+                    </div>
+                    This includes : </br></br>
+                    Unlimited Classes </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class = "parentOfSub" id = "parentDiet">
+        <div id = "availableOffers">
+            <div id = "offer_1" class = "offer">
+                <div class = "nutriTopHalf">
+                   
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC 10.00 
+                    </div>
+                    <div class = "duration">
+                        A WEEK
+                    </div>
+                    This includes : </br></br>
+                    Two checkups per week </br>
+                    Recuring subscription </br>
+                    Unlimited Dietician Assistance
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+            </div>
+            <div id = "offer_2" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  25.00 
+                    </div>
+                    <div class = "duration">
+                        A WEEK
+                    </div>
+                    This includes : </br></br>
+                    Three checkups per week </br>
+                    Recuring subscription </br>
+                    Unlimited Dietician Assistance
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+        
+            </div>
+            <div id = "offer_3" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  45.00 
+                    </div>
+                    <div class = "duration">
+                        A WEEK
+                    </div>
+                    This includes : </br></br>
+                    Four checkups per week </br>
+                    Recuring subscription </br>
+                    Unlimited Dietician Assistance
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_4" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  100.00 
+                    </div>
+                    <div class = "duration">
+                        A MONTH
+                    </div>
+                    This includes : </br></br>
+                    Twelve checkups per month </br>
+                    Three checkups per week </br>
+                    Recuring subscription </br>
+                    Unlimited Dietician Assistance
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_5" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  30.00 
+                    </div>
+                    <div class = "duration">
+                        A MONTH
+                    </div>
+                    This includes : </br></br>
+                    Four classes per month </br>
+                    One class per week </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_6" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  20.00 
+                    </div>
+                    <div class = "duration">
+                        A MONTH
+                    </div>
+                    This includes : </br></br>
+                    Eight classes per month </br>
+                    Two classes per week </br>
+                    Recuring subscription </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+            <div id = "offer_7" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  10.00 
+                    </div>
+                    <div class = "duration">
+                        This is for those who </br> 
+                        just want to test it out
+                    </div>
+                    This includes : </br></br>
+                    Two classes per week </br>
+                    Recuring subscription </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+            
+            </div>
+            <div id = "offer_8" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  200.00 
+                    </div>
+                    <div class = "duration">
+                        THREE MONTHS
+                    </div>
+                    This includes : </br></br>
+                    Unlimited Classes </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+            
+            </div>
+            <div id = "offer_9" class = "offer">
+                <div class = "nutriTopHalf">
+                    
+                    <!--<button class="subButton">SELECT</button>-->
+                </div>
+                <div class="comments">
+                    <div class="price">
+                        GHC  500.00 
+                    </div>
+                    <div class = "duration">
+                        SIX MONTHS
+                    </div>
+                    This includes : </br></br>
+                    Unlimited Classes </br>
+                    Unlimited Trainer Assistance 
+
+                </div>
+                <div class = "subButton">
+                    <button class = "selection">SELECT</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer container -- maintain -->
+
+    <div class="footer">
+        <footer>
+            <div class="social-media">
+                <div class="sm-icons">
+                    <!-- <i class="fas fa-thumbs-up fa-5x"></i> -->
+                    <i class="fa fa-facebook fa-2x"></i>
+                    <i class="fa fa-google-plus fa-2x"></i>
+                    <i class="fa fa-twitter fa-2x"></i>
+                    <i class="fa fa-youtube fa-2x"></i>
+                    <i class="fa fa-instagram fa-2x"></i>
+                    <i class="fa fa-linkedin fa-2x"></i>
+                </div>
+            </div>
+            <div class="address">
+                4043 N RAVENSWOOD AVE, SUIT 316, CHINA MALL, ACCRA | 03025478596
+            </div>
+            <hr style="border: 1px solid #7676762b; width: 60%">
+
+            <div class="footer-details">
+                <div class="about-footer">
+                    <p>FAQ</p>
+                    <p>Polices</p>
+                    <p>Privacy Policy</p>
+                    <p>Referral Program</p>
+                </div>
+
+                <div class="comment-box">
+                    <form action="">
+                        <div class="input-container">
+                            <input type="text" placeholder="Name"><br>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" name="" placeholder="Email"><br>
+                        </div>
+                        <div class="input-container">
+                          <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                        </div>
+                        <div class="submitBtn">
+                            <input type="submit" id="submit-btn">
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="working-hours">
+                    <h4>Opening Hours</h4>
+                    <p>Mon: 5:30 am – 9:30 pm</p>
+                    <p>Tue: 5:30 am – 9:30 pm</p>
+                    <p>Wed: 5:30 am – 9:30 pm</p>
+                    <p>Thu: 5:30 am – 9:30 pm</p>
+                    <p>Fri: 5:30 am – 9:30 pm</p>
+                    <p>Sat: 8:00 am – 5:00 pm</p>
+                    <p>Sun: 10:00 am – 5:00 pm</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="index.js"></script>
+    <script src="subscribe.js"></script>
+</body>
+
+</html>

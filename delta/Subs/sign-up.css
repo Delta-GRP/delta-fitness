@@ -1,0 +1,143 @@
+.signin-content{
+    /* background-color: #6bdbfd; */
+    display: flex;
+    justify-content :center;
+    font-family: 'Montserrat ExtraLight';
+}
+
+.container{
+    width: 800px;
+    height: 425px;
+    margin-top: 17px;
+}
+
+.blueBg{
+    top: 13px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff33;
+    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.blueBg .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blueBg .box h2 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.blueBg .box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: white;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px #060606;
+    font-family: 'Montserrat ExtraLight'
+    
+
+}
+
+.formBox{
+    position: relative;
+    /* top: 0; */
+    bottom: 409px;
+    left: 0;
+    width: 50%;
+    height: 105%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+
+
+.formBox.active {
+    left: 50%;
+}
+
+.formBox .signinForm{
+    transition-delay: 0.25s;
+}
+
+.formBox.active .signinForm {
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formBox .signupForm {
+    transition-delay: 0s;
+    left: 100%;
+}
+
+.formBox.active .signupForm {
+    left:0;
+    transition-delay: 0.25s;
+}
+
+.formBox .form{
+    position: absolute;
+    /* left: 0; */
+    width: 80%;
+    padding: 6%;
+    transition: 0.5s;
+}
+
+.formBox .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox .form form h3{
+    font-size: 1.5em;
+    color: #b60f00;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.formBox .form form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #333;
+    font-family: 'Montserrat ExtraLight';
+    border-radius: 3px;
+
+}
+
+.formBox .form form input[type="submit"]{
+    background-color: #b60f00;
+    border: none;
+    color: white;
+    max-width: 100px;
+    cursor: pointer;
+    font-family: 'Montserrat ExtraLight';
+    box-shadow: 1px 1px 3px #595959 ;
+    border-radius: 2px;
+}
+

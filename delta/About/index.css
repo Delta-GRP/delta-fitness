@@ -1,0 +1,623 @@
+@import url("sign-up.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Montserrat ExtraLight';
+    color: white;
+}
+
+.logo {
+    color: white;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul li {
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: #b60f00;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 6px;
+}
+
+.sign-in {
+    padding-top: 6px;
+}
+
+.sign-in a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.sign-in a:hover{
+    color:#b60f00;
+}
+
+.black-overlay {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #2e2e2e;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+
+.close-btn i {
+    float: right;
+    /* transform: translate(-98px, 48px); */
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    z-index: 10005;
+    color: #6cb2f4;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+#closeBtn.btnColor{
+    color: #b60f00;
+}
+
+.close-btn i:hover {
+    transform: rotate(360deg);
+}
+
+
+
+.signin-content {
+    display: none;
+    position: fixed;
+    /* top: 25%; */
+    left: 12%;
+    /* width: 50%; */
+    /* height: 50%; */
+    padding: 16px;
+    z-index: 1002;
+    overflow: auto;
+}
+
+/* cover image */
+
+.cover-image {
+    background-image: url('/assets/cover1.jpg');
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.button {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#cover-btn {
+    font-size: 18px;
+    padding: 20px;
+    background-color: #b60f00;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 4px #e30505;
+    border-radius: 4px;
+}
+
+#cover-btn:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 12px white;
+    cursor: pointer;
+}
+
+.cover-text {
+    text-align: center;
+    font-size: 56px;
+    text-transform: uppercase;
+    font-family: 'Arial black';
+    color: white;
+    top: 50%;
+    left: 50%;
+    padding-top: 130px;
+}
+
+.about-fitness {
+    font-family: 'Montserrat ExtraLight';
+    color: white;
+    font-size: 22px;
+    padding: 10px 80px;
+}
+
+.about-fitness h3 {
+    color: #767676;
+    font-weight: bold;
+}
+
+/* group traning  */
+.group-training {
+    background-image: url('/assets/group-training.jpg');
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.fly-in-container-group {
+    transform: translateY(100%);
+}
+
+.animation-box {
+    padding: 6px 4px;
+    background-color: #0b111dd4;
+    width: 45%;
+    color: white;
+    top: 50%;
+    transform: translateX(0px);
+    opacity: 0;
+    transition: 1s all ease;
+    font-size: 20px;
+}
+
+.animation-box .group-training-fly-in h2 {
+    padding: 0px;
+    color: white;
+}
+
+.animation-box .group-training-fly-in .explore-more-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.animation-box .explore-more-link {
+    padding-top: 4px;
+}
+
+.animation-box a {
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+.animation-box.show-box {
+    opacity: 1;
+    transform: translateX(50px);
+}
+
+/* personal training */
+.personal-training {
+    background-image: url('/assets/solo-training.jpg');
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 35px;
+    
+}
+
+.fly-in-container-personal {
+    transform: translate(100%, 130%);
+    width: 50%;
+}
+
+.animation-box-personal {
+    padding: 6px 4px;
+    background-color: #0b111dd4;
+    width: 500px;
+    color: white;
+    top: 50%;
+    transform: translateX(0px);
+    opacity: 0;
+    transition: 1s all ease;
+
+    font-size: 20px;
+}
+
+.animation-box-personal .group-training-fly-in h2 {
+    padding: 0px;
+    color: white;
+}
+
+.animation-box-personal .group-training-fly-in .explore-more-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.animation-box-personal .explore-more-link {
+    padding-top: 4px;
+}
+
+.animation-box-personal a {
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+.animation-box-personal.show-box-personal {
+    opacity: 1;
+    transform: translateX(-100px);
+}
+
+/* Diet */
+
+.diet {
+    background-image: url('/assets/fruits-veggies-today-main-190130.jpg');
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 35px;
+}
+
+.fly-in-container-diet {
+    transform: translate(100%, 130%);
+    width: 50%;
+}
+
+.animation-box-diet {
+    padding: 6px 4px;
+    background-color: #0b111dd4;
+    width: 500px;
+    color: white;
+    top: 50%;
+    transform: translateX(0px);
+    opacity: 0;
+    transition: 1s all ease;
+
+    font-size: 20px;
+}
+
+.animation-box-diet, .group-training-fly-in, h2 {
+    padding: 0px;
+    color: white;
+}
+
+.animation-box-diet, .group-training-fly-in, .explore-more-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.animation-box-diet, .explore-more-link {
+    padding-top: 4px;
+}
+
+.animation-box-diet, a {
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+.animation-box-diet, .show-box-diet {
+    opacity: 1;
+    transform: translateX(-100px);
+}
+
+/* coaches */
+
+.our-trainers{
+    font-family: 'Edwardian Script ITC';
+    color: #767676;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 6rem;
+    text-align: center;
+}
+
+.our-trainers p{
+  margin: 0px;
+}
+
+.trainers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 20px;
+    padding: 0px 91px;
+
+}
+
+.trainers-grid-container .trainer1-grid-image {
+    background-image: url('./Assets/fitness-instructor-job-description-5706x3936-20201126.jpeg');
+    background-color: #cccccc;
+    height: 260px;
+    border-radius: 50%;
+    width: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.3s;
+    /* cursor: pointer; */
+
+}
+
+
+.trainers-grid-container .trainer2-grid-image {
+    background-image: url('./assets/b\ coach\ 2.webp');
+    background-color: #cccccc;
+    height: 260px;
+    border-radius: 50%;
+    width: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.3s;
+    /* cursor: pointer; */
+
+}
+
+.trainers-grid-container .trainer3-grid-image {
+    background-image: url('./assets/coach3.jpg');
+    background-color: #cccccc;
+    height: 260px;
+    border-radius: 50%;
+    width: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.3s;
+    /* cursor: pointer; */
+
+}
+
+.trainers-grid-container .trainer4-grid-image {
+    background-image: url('./assets/coach4.jpg');
+    background-color: #cccccc;
+    height: 260px;
+    border-radius: 50%;
+    width: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.3s;
+    /* cursor: pointer; */
+
+}
+
+
+.trainers-grid-container .trainer-grid-name{
+    text-align: center;
+}
+
+/* scroll to top bottom */
+
+.scroll-to-top button {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #b60f00;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    box-shadow: 0 0 10px #972e24;
+
+}
+
+.scroll-to-top button i {
+    color: white;
+}
+
+
+/* more programs/offers */
+.more {
+    font-family: 'Edwardian Script ITC';
+    font-weight: bold;
+    color: #767676;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.more p {
+    margin: 0px;
+}
+
+.more-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 50px;
+    padding: 0px 20%;
+}
+
+.grid-container {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 10px;
+    width: 190px;
+    overflow: hidden;
+}
+
+.grid-container .grid-image1 {
+    background-image: url('./Assets/Determination.png');
+    background-color: #cccccc;
+    height: 157px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+}
+
+.grid-container .grid-image2 {
+    background-image: url('./Assets/positivity.webp');
+    background-color: #cccccc;
+    height: 157px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+}
+
+.grid-container .grid-image3 {
+    background-image: url('./Assets/group-young-friends-having-fun-together-vector-26803087.jpg');
+    background-color: #cccccc;
+    height: 157px;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+}
+
+
+.grid-container .grid-image1:hover {
+    transform: scale(1.1);
+}
+
+.grid-container .grid-image2:hover {
+    transform: scale(1.1);
+}
+
+.grid-container .grid-image3:hover {
+    transform: scale(1.1);
+}
+
+.grid-container .grid-title {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.grid-container .grid-description {
+    text-align: center;
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+/* footer */
+
+
+.footer {
+    width: 100%;
+    height: 50px;
+}
+
+.footer .address {
+    padding-top: 10px;
+    text-align: center;
+    color: #767676;
+}
+
+.social-media {
+    text-align: center;
+    height: 65px;
+    background-color: #b60f00;
+}
+
+.social-media .sm-icons {
+    padding: 17px 0px;
+}
+
+.social-media i {
+    color: white;
+    padding: 0px 8px;
+    cursor: pointer;
+}
+
+.about-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-container{
+    padding: 8px;
+}
+
+.comment-box form input  {
+   padding: 8px;
+    border-radius:4px;
+    border: none;
+    outline: none;
+    
+}
+
+.comment-box form #submit-btn{
+  background-color: #b60f00;
+  color: white;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.footer-details .working-hours {
+    padding-right: 100px;
+}

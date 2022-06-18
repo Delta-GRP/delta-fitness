@@ -1,0 +1,126 @@
+
+body{
+    background-color: black;
+}
+
+
+
+#subBody{
+    margin-left: 30%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#train{
+    text-decoration: none;
+}
+
+#eat{
+    color: grey;
+    text-decoration: none;
+}
+
+
+
+.subTopic{
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    padding-bottom: 10%;
+    color: white;
+    text-align: left;
+    text-decoration: underline;
+}
+
+
+
+.parentOfSub{
+    padding-bottom: 1%;
+    color: black;
+    display: grid;
+}
+
+#parentTrain{
+    background-image: url("Assets/equipmqnt-dumbells.jpeg");
+    background-size: cover;
+    /* display: none; */
+}
+
+#parentDiet{
+    background-image: url("Assets/photo_2022-05-05_14-39-07.jpg");
+    background-size: cover;
+    display: none;
+}
+
+#availableOffers{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: rgb(0, 0, 1); */
+    gap:40px;
+    height: 30%;
+    width: 50%;
+    margin-left: 27%;
+}
+
+.offer{
+    height: 500px;
+    /* width: 100%; */
+    
+    
+    background-color: rgb(250, 250, 250);
+}
+
+.topHalf{
+    height : 33%;
+    border-bottom: 1px solid black;
+    background-image: url("Assets/equipmqnt-dumbells.jpeg");
+    background-blend-mode: lighten;
+}
+
+.nutriTopHalf{
+    height : 33%;
+    border-bottom: 1px solid black;
+    background-image: url("Assets/heart\ healthy.jpeg");
+    
+    background-blend-mode: lighten;
+}
+
+
+.price{
+    font-size: xx-large;
+    text-align: center;
+}
+
+
+.duration{
+    margin-top: 15%;
+    text-align: center;
+}
+
+
+.comments{
+    margin-top: 10%;
+    margin-bottom: 30%;
+    height: 30%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.subButton{
+    height: 20%;
+    margin-bottom: 10%;
+    margin-top: 30%;
+    margin-left: 25%;
+}
+
+.selection{
+    background-color: rgba(0, 40, 220, 0.1);
+    width: 65%;
+    height: 45%;
+    border-radius: 5%;
+    margin-left: 3%;
+    /* position: absolute; */
+}
+

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c9d22a1e3d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Delta Fitness Studio</title>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="logo">
+            <b>DELTA Fitness Studio</b>
+        </div>
+        <div class="tab">
+            <ul class="tab-contents">
+                <li><a target="_self" href="../landing page/index.html">Home</a></li>
+                <li><a target="_self" href="../Subs/index.html">Subscription</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a target="_self" href="#">About</a></li>
+            </ul>
+        </div>
+
+        <div class="sign-in">
+            <a onclick="openSignInModal()" href="#">Sign in</a>
+        </div>
+    </div>
+
+    <div class="sign-up-container">
+        <div id="signin-bg" class="black-overlay">
+
+        </div>
+        <div id="signin-modal" class="signin-content">
+            <div class="close-btn">
+                <i id="closeBtn" onclick="closeSignInModal()" class="fa fa-close fa-2x"></i>
+            </div>
+            <div class="container">
+                <div class="blueBg">
+
+                    <div class="box signin">
+                        <h2>Already Have an Account?</h2>
+                        <button class="signinBtn">Sign In</button>
+                    </div>
+                    <div class="box signup">
+                        <h2>Don't Have an Account?</h2>
+                        <button class="signupBtn">Sign Up</button>
+                    </div>
+                </div>
+                <div class="formBox">
+                    <div class="form signinForm">
+                        <form action="">
+                            <h3>Sign In</h3>
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="submit" value="Log In">
+                        </form>
+                    </div>
+
+                    <div class="form signupForm">
+                        <form action="">
+                            <h3>Sign Up</h3>
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="submit" value="Register">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="cover-image">
+        <div class="cover-text">
+            Your Fitness is Essential
+        </div>
+        <div class="button">
+
+            <button id="cover-btn">Let's Get Started</button>
+        </div>
+    </div> -->
+
+    <div class="about-fitness">
+        <h3>DELTA FITNESS </h3>
+
+        Delta Fitness is more than your average gym. It's everything fitness in one.<br>
+
+        We've transformed the fitness experience to encompass digital and in-studio offerings to keep you at your
+        best—anywhere,
+        anytime.<br>
+        We believe that each person requires unique training for their personal abilities. Our trainers are all certified
+        and able to adapt to your needs wheather you are dealing with injury or health issues.<br>
+        There is always a way to train hardd and get results. Our videos provides a variety of workouts with movements that 
+        are simple, effective and safe, no matter your level.
+    </div>
+
+    <!-- <div class="group-training">
+        <div class="fly-in-container-group">
+            <div class="animation-box ">
+                <div class="group-training-fly-in ">
+                    <h2>GROUP Fitness</h2>
+                    Enjoy our unrivaled classes in Sixty, Cycle, Barre, Row, Yoga and more in our one-of-a-kind studio
+                </div>
+                <div class="explore-more-link">
+                    <a href="#">Explore More >></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="personal-training">
+        <div class="fly-in-container-personal">
+            <div class="animation-box-personal ">
+                <div class="group-training-fly-in-personal">
+                    <h2>PERSONAL Training</h2>
+                    A personal trainer will work with you to design a
+                    workout program for both in studio and at home workouts.
+                </div>
+                <div class="explore-more-link">
+                    <a href="#">Explore More >></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="diet">
+        <div class="fly-in-container-diet">
+            <div class="animation-box-diet ">
+                <div class="group-training-fly-in-diet">
+                    <h2>DIET</h2>
+                    A good diet plays a good role in our fitness.
+                    We offer diet choices and preferences for everyone.
+                </div>
+                <div class="explore-more-link">
+                    <a href="#">Explore More >></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="our-trainers">
+        <p>Our Trainers</p>
+    </div>
+    <div class="trainers-container">
+        <div class="trainers-grid-container">
+            <div class="trainer1-grid-image"></div>
+            <div class="trainer-grid-name">
+                <h3>Sissy Train Dee</h3>
+            </div>
+        </div>
+        <div class="trainers-grid-container">
+            <div class="trainer2-grid-image"></div>
+            <div class="trainer-grid-name">
+                <h3>John Doe</h3>
+            </div>
+        </div>
+        <div class="trainers-grid-container">
+            <div class="trainer3-grid-image"></div>
+            <div class="trainer-grid-name">
+                <h3>James Sampson</h3>
+            </div>
+        </div>
+        <div class="trainers-grid-container">
+            <div class="trainer4-grid-image"></div>
+            <div class="trainer-grid-name">
+                <h3>Johnnih Endon</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-to-top">
+        <button onclick="scrollToTop()" id="scroll-btn">
+            <i class="fa fa-angle-up fa-2x"></i>
+        </button>
+    </div>
+
+    <div class="more">
+        <p> Our Philosophy </p>
+    </div>
+
+    <div class="more-cards">
+        <div class="grid-container">
+            <div class="grid-image1"> </div>
+            <div class="grid-title">DETERMINATION</div>
+            <div class="grid-description">
+                We Never GIVE UP. No situation is greater than us, We will Overcome. 
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-image2"> </div>
+            <div class="grid-title">POSITIVITY</div>
+            <div class="grid-description">
+                Here we keep our minds clear of all negetive thoughts and strike forward with more power everyday.
+                
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-image3"> </div>
+            <div class="grid-title">ENTERTAINMENT</div>
+            <div class="grid-description">
+               Come lets have fun as we improve and strenghten ourselves
+            </div>
+        </div>
+        <!--<div class="grid-container">
+            <div class="grid-image"> </div>
+            <div class="grid-title">Something</div>
+            <div class="grid-description">
+                Our well appointed "Sweat Lab" has everything you need for your individual workout outside of the group
+                class
+                setting.
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-image"> </div>
+            <div class="grid-title">Something</div>
+            <div class="grid-description">
+                Our well appointed "Sweat Lab" has everything you need for your individual workout outside of the group
+                class
+                setting.
+            </div>
+        </div>-->
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="social-media">
+                <div class="sm-icons">
+                    <!-- <i class="fas fa-thumbs-up fa-5x"></i> -->
+                    <i class="fa fa-facebook fa-2x"></i>
+                    <i class="fa fa-google-plus fa-2x"></i>
+                    <i class="fa fa-twitter fa-2x"></i>
+                    <i class="fa fa-youtube fa-2x"></i>
+                    <i class="fa fa-instagram fa-2x"></i>
+                    <i class="fa fa-linkedin fa-2x"></i>
+                </div>
+            </div>
+            <div class="address">
+                4043 N RAVENSWOOD AVE, SUIT 316, CHINA MALL, ACCRA | 03025478596
+            </div>
+            <hr style="border: 1px solid #7676762b; width: 60%">
+
+            <div class="footer-details">
+                <div class="about-footer">
+                    <p>FAQ</p>
+                    <p>Polices</p>
+                    <p>Privacy Policy</p>
+                    <p>Referral Program</p>
+                </div>
+
+                <div class="comment-box">
+                    <form action="">
+                        <div class="input-container">
+                            <input type="text" placeholder="Name"><br>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" name="" placeholder="Email"><br>
+                        </div>
+                        <div class="input-container">
+                          <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                        </div>
+                        <div class="submitBtn">
+                            <input type="submit" id="submit-btn">
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="working-hours">
+                    <h4>Opening Hours</h4>
+                    <p>Mon: 5:30 am – 9:30 pm</p>
+                    <p>Tue: 5:30 am – 9:30 pm</p>
+                    <p>Wed: 5:30 am – 9:30 pm</p>
+                    <p>Thu: 5:30 am – 9:30 pm</p>
+                    <p>Fri: 5:30 am – 9:30 pm</p>
+                    <p>Sat: 8:00 am – 5:00 pm</p>
+                    <p>Sun: 10:00 am – 5:00 pm</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

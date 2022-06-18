@@ -1,0 +1,212 @@
+@import url("../landing-page/sign-up.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Montserrat ExtraLight';
+    color: white;
+}
+
+.logo {
+    background-image: url('../landing-page/assets/deltafitnessstudiologo.png');
+    width: 200px;
+    height: 45px;
+    cursor: pointer;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul li {
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: #b60f00;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 6px;
+}
+
+.sign-in {
+    padding-top: 6px;
+}
+
+.sign-in a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.sign-in a:hover{
+    color:#b60f00;
+}
+
+.black-overlay {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #2e2e2e;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+
+.close-btn i {
+    float: right;
+    /* transform: translate(-98px, 48px); */
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    z-index: 10005;
+    color: #6cb2f4;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+#closeBtn.btnColor{
+    color: #b60f00;
+}
+
+.close-btn i:hover {
+    transform: rotate(360deg);
+}
+
+
+
+.signin-content {
+    display: none;
+    position: fixed;
+    /* top: 25%; */
+    left: 12%;
+    /* width: 50%; */
+    /* height: 50%; */
+    padding: 16px;
+    z-index: 1002;
+    overflow: auto;
+}
+
+/* cover image */
+
+
+/* scroll to top bottom */
+
+.scroll-to-top button {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #b60f00;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    box-shadow: 0 0 10px #972e24;
+
+}
+
+.scroll-to-top button i {
+    color: white;
+}
+
+
+
+
+/* footer */
+
+
+.footer {
+    width: 100%;
+    height: 50px;
+}
+
+.footer .address {
+    padding-top: 10px;
+    text-align: center;
+    color: #767676;
+}
+
+.social-media {
+    text-align: center;
+    height: 65px;
+    background-color: #b60f00;
+}
+
+.social-media .sm-icons {
+    padding: 17px 0px;
+}
+
+.social-media i {
+    color: white;
+    padding: 0px 8px;
+    cursor: pointer;
+}
+
+.about-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-container {
+    padding: 8px;
+}
+
+.comment-box form input {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+
+}
+
+.comment-box form #submit-btn {
+    background-color: #b60f00;
+    color: white;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.footer-details .working-hours {
+    padding-right: 100px;
+}
+
