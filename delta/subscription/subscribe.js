@@ -1,8 +1,8 @@
 let loc = document.URL;
 if(loc.search("subscribe") != -1){
     //alert(document.URL)
-    document.getElementById("underLine").style.textDecoration = "underline"
-    document.getElementById("underLine").style.textDecorationColor = "red"
+   // document.getElementById("underLine").style.textDecoration = "underline"
+   // document.getElementById("underLine").style.textDecorationColor = "red"
 }
 
 let subBodtrain = document.getElementById("train");
