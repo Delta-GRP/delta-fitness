@@ -45,7 +45,14 @@ li a {
 }
 
 li a:hover {
+    /* color: #b60f00; */
+    transition: all 0.8s ease-in-out;
+    border-bottom: 2px solid #b60f00;
+}
+
+.active {
     color: #b60f00;
+    
 }
 
 .navbar-container {
@@ -161,9 +168,7 @@ li a:hover {
 }
 
 #cover-btn:hover {
-    background-color: black;
-    color: white;
-    box-shadow: 1px 1px 12px white;
+    background-color: #960e02;
     cursor: pointer;
 }
 
@@ -589,7 +594,7 @@ li a:hover {
     cursor: pointer;
 }
 
-.VZsocial-media .sm-icons i:hover {
+.social-media .sm-icons i:hover {
   box-shadow: 1px 1px 3px white;
   padding: 2px 10px;
   transition: all 0.2s ease-in-out;

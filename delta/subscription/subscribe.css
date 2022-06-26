@@ -42,13 +42,13 @@ body{
 }
 
 #parentTrain{
-    background-image: url("Assets/equipmqnt-dumbells.jpeg");
+    background-image: url("assets/equipmqnt-dumbells.jpeg");
     background-size: cover;
     /* display: none; */
 }
 
 #parentDiet{
-    background-image: url("Assets/photo_2022-05-05_14-39-07.jpg");
+    background-image: url("assets/photo_2022-05-05_14-39-07.jpg");
     background-size: cover;
     display: none;
 }

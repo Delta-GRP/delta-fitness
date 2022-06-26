@@ -1,4 +1,14 @@
 
+
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll(".tab .tab-contents li a" ).
+forEach(link => {
+    if(link.href.includes(`${activePage}`)){
+        console.log(activePage);
+        link.classList.add('active');
+    }
+});
+
 function slideInAnimation(start, end) {
     var fadeInContainer = document.querySelector("."+start);
     const observer = new IntersectionObserver(entries => {
@@ -22,13 +32,16 @@ function slideInAnimation(start, end) {
 }
 
 
+
 slideInAnimation("animation-box", "show-box");
 slideInAnimation("animation-box-personal", "show-box-personal");
 
 
 // scroll to top
 
-var scrollBtn = document.getElementById('scroll-btn');
+//var scrollBtn = document.getElementById('scroll-btn');
+var scrollBtn = document.querySelector('scroll-btn');
+
 var rootElement = document.documentElement;
 window.onscroll = function () { showScrollBtn() }
 
@@ -45,7 +58,7 @@ function showScrollBtn() {
 
 function scrollToTop() {
     document.body.scrollTop = 0;
-   rootElement.scrollTop = 0;
+    rootElement.scrollTop = 0;
 }
 
 function openSignInModal() {
