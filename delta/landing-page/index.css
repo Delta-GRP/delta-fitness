@@ -47,7 +47,7 @@ li a {
 li a:hover {
     /* color: #b60f00; */
     transition: all 0.8s ease-in-out;
-    border-bottom: 2px solid #b60f00;
+    border-bottom: 2px solid #b60f00; 
 }
 
 .active {
