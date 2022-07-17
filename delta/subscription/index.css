@@ -154,13 +154,142 @@ li a:hover {
     overflow: auto;
 }
 
+#highlight{
+    color:#f63c25;
+}
+
+.training-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.training-header .title{
+    color: #000;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.training-header .info{
+    text-align: center;
+    font-size: 22px;
+}
 
 
 
+.training-price-container{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
+.training-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
+.training-price .level-container{
+    padding: 4px 8px;
+    box-shadow: 3px 6px 18px #72727260;
+}
 
+.training-price .level-container .level1, .level2 , .level3{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
 
+.training-container .level-container .head-container{
+    background-image: url(./assets/blakcnredbg.jpg);
+    clip-path: polygon(0 1%, 100% 0%, 100% 93%, 0% 100%);
+}
+
+.head-container .head , .head2-container .head2{
+    padding: 50px 40px;
+    text-transform: uppercase;
+    color: white;
+}
+
+ .title{
+    font-size: 54px;
+    color: #f63c25;
+    font-weight: bolder;
+}
+
+.price {
+    font-size: 64px;
+    font-weight: bolder;
+    color: white;
+}
+
+.package{
+    font-weight: 400;
+    color: white;
+}
+
+.training-container .level-container .info-container{
+    padding: 40px;
+}
+
+.info-container{
+    padding: 20px;
+}
+
+.info-container #check-marks1 img, #check-marks2 div{
+    text-align: center;
+}
+.info-container #check-marks1 img, #check-marks2 img, #check-marks3 img{
+  width: 30px;
+}
+
+.info-container .info{
+    display: inline-flex;
+}
+.info-container #offers1, #offers3{
+    color: black;
+    font-size: 20px;
+}
+
+.info-container #offers2{
+    color: white;
+    font-size: 20px;
+}
+
+.info-container #offers1 div, #offers2 div, #offers3 div{
+    padding: 5px 4px;
+}
+
+.bottom{
+  padding: 10px 50px;
+  margin-bottom: 40px;
+}
+
+.bottom button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: #f63c25;
+}
+
+.bottom button:hover{
+    background-color: #b60f00;
+}
+
+.level-container .level2{
+    background-color: black;
+    opacity: 0.8;
+}
+.training-price-container .level2-container{
+    background-image: url(./assets/darkred.jpg);
+    
+}
 
 
 .option{
@@ -169,11 +298,13 @@ li a:hover {
     margin-right: 2%;
 }
 
+
 .offers{
     width: 70%;
     display: inline-flex;
     padding-left: 17%;
     text-align: center;
+    
 }
 
 .darken{
@@ -260,7 +391,7 @@ hr{
     font-weight: bolder;
     font-size: xx-large;
     padding-bottom: 1%;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     padding-top: 4%;
 }
 

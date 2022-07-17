@@ -1,97 +1,192 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Delta Fitness Studio</title>
-        <meta charset="UTF-8">
+
+<head>
+    <title>Delta Fitness Studio</title>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c9d22a1e3d.js" crossorigin="anonymous"></script>
-        <script defer src="../../root/root.js"></script>
-        <link rel = "stylesheet" href = "index.css">
-        <!-- <link rel = "stylesheet" href = "../../github/delta-fitness-master/delta/landing-page/index.css"> -->
-    </head>
-    <body>
-        <div class="navbar-container">
-            <div class="logo">
-                <a href="../landing-page/index.html"></a>
+    <script defer src="../../root/root.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel = "stylesheet" href = "../../github/delta-fitness-master/delta/landing-page/index.css"> -->
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="logo">
+            <a href="../landing-page/index.html"></a>
             <!-- <b>DELTA Fitness Studio</b> -->
-            </div>
-            <div class="tab">
-                <ul class="tab-contents">
-                    <li><a target="_self" href="../landing-page/index.html">Home</a></li>
-                    <li><a target="_self" href="index.html">Subscription</a></li>
-                    <!-- <li><a href="#">Training</a></li> -->
-                    <li><a target="_self" href="../about/about.html">About</a></li>
-                </ul>
-            </div>
-    
-            <div class="sign-in">
-                <a onclick="openSignInModal()" href="#">Sign in</a>
-            </div>
         </div>
-    
-        <!-- hidden sign in container -- maintain -->
-        <div class="sign-up-container">
-            <div id="signin-bg" class="black-overlay">
-    
+        <div class="tab">
+            <ul class="tab-contents">
+                <li><a target="_self" href="../landing-page/index.html">Home</a></li>
+                <li><a target="_self" href="index.html">Subscription</a></li>
+                <!-- <li><a href="#">Training</a></li> -->
+                <li><a target="_self" href="../about/about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div class="sign-in">
+            <a onclick="openSignInModal()" href="#">Sign in</a>
+        </div>
+    </div>
+
+    <!-- hidden sign in container -- maintain -->
+    <div class="sign-up-container">
+        <div id="signin-bg" class="black-overlay">
+
+        </div>
+        <div id="signin-modal" class="signin-content">
+            <div class="close-btn">
+                <i id="closeBtn" onclick="closeSignInModal()" class="fa fa-close fa-2x"></i>
             </div>
-            <div id="signin-modal" class="signin-content">
-                <div class="close-btn">
-                    <i id="closeBtn" onclick="closeSignInModal()" class="fa fa-close fa-2x"></i>
-                </div>
-                <div class="container">
-                    <div class="blueBg">
-    
-                        <div class="box signin">
-                            <h2>Already Have an Account?</h2>
-                            <button class="signinBtn">Sign In</button>
-                        </div>
-                        <div class="box signup">
-                            <h2>Don't Have an Account?</h2>
-                            <button class="signupBtn">Sign Up</button>
-                        </div>
+            <div class="container">
+                <div class="blueBg">
+
+                    <div class="box signin">
+                        <h2>Already Have an Account?</h2>
+                        <button class="signinBtn">Sign In</button>
                     </div>
-                    <div class="formBox">
-                        <div class="form signinForm">
-                            <form action="">
-                                <h3>Sign In</h3>
-                                <input type="text" placeholder="Email">
-                                <input type="password" placeholder="Password">
-                                <input type="submit" value="Log In">
-                            </form>
-                        </div>
-    
-                        <div class="form signupForm">
-                            <form action="">
-                                <h3>Sign Up</h3>
-                                <input type="text" placeholder="First Name">
-                                <input type="text" placeholder="Last Name">
-                                <input type="text" placeholder="Email">
-                                <input type="password" placeholder="Password">
-                                <input type="submit" value="Register">
-                            </form>
-    
-                        </div>
+                    <div class="box signup">
+                        <h2>Don't Have an Account?</h2>
+                        <button class="signupBtn">Sign Up</button>
                     </div>
                 </div>
-    
+                <div class="formBox">
+                    <div class="form signinForm">
+                        <form action="">
+                            <h3>Sign In</h3>
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="submit" value="Log In">
+                        </form>
+                    </div>
+
+                    <div class="form signupForm">
+                        <form action="">
+                            <h3>Sign Up</h3>
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <input type="submit" value="Register">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="page-loading-bar"></div>
+
+    <div class="training-container">
+        <div class="training-header">
+            <div class="title">
+                <h1>
+                    Best Price <span id="highlight">Plan</span> </h1>
+            </div>
+            <div class="info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                <br> luctus nec ullamcorper mattis, pulvinar dapibus leo
             </div>
         </div>
+
+        <div class="training-price-container">
+            <div class="training-price">
+                <div class="level-container">
+                    <div class="level1">
+                        <section class="head-container">
+                            <div class="head">
+                                <div class="title">
+                                    Standard
+                                </div>
+                                <div class="price">
+                                    $98
+                                </div>
+                                <div class="package">
+                                    Per Month
+                                </div>
+                            </div>
+                        </section>
+                        <section class="info-container">
+                           <div class="info">
+                              <div id="check-marks1"></div>
+                              <div id="offers1"></div>
+                           </div>
+                        </section>
+                        <section class="bottom">
+                            <button>Join Us</button>
+                        </section>
+                    </div>
+                </div>
+                <div class="level-container level2-container">
+                    <div class="level2">
+                        <section class="head2-container">
+                            <div class="head2">
+                                <div class="title">
+                                    Premium
+                                </div>
+                                <div class="price">
+                                    $199
+                                </div>
+                                <div class="package">
+                                    Per Month
+                                </div>
+                            </div>
+                        </section>
+                        <section class="info-container">
+                           <div class="info">
+                              <div id="check-marks2"></div>
+                              <div id="offers2"></div>
+                           </div>
+                        </section>
+                        <section class="bottom">
+                            <button>Join Us</button>
+                        </section>
+                    </div>
+                </div>
+                <div class="level-container">
+                    <div class="level1">
+                        <section class="head-container">
+                            <div class="head">
+                                <div class="title">
+                                    Expert
+                                </div>
+                                <div class="price">
+                                    $295
+                                </div>
+                                <div class="package">
+                                    Per Month
+                                </div>
+                            </div>
+                        </section>
+                        <section class="info-container">
+                           <div class="info">
+                              <div id="check-marks3"></div>
+                              <div id="offers3"></div>
+                           </div>
+                        </section>
+                        <section class="bottom">
+                            <button>Join Us</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="page-loading-bar"></div>
-
-
-        <div class="training">
+        <!-- <div class="training">
             <div class="topic">
                 TRAINING
             </div>
-            <div class = "offers">
+            <div class="offers">
                 <div class="option">
                     <div class="lightenBorder">
                         <div class="firstHalf">
                             <div class="heading">STANDARD</div>
                             <div class="cost"></div>
-                            <div class="duration">Per Month</div>   
+                            <div class="duration">Per Month</div>
                         </div>
                         <div class="slant"></div>
                         <div class="paddingSpace"></div>
@@ -122,116 +217,119 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="scroll-to-top">
-            <button onclick="scrollToTop()" id="scroll-btn">
-                <i class="fa fa-angle-up fa-2x"></i>
-            </button>
-        </div>
+        </div> -->
+    </div>
 
-        <hr>
-        
-        <div class="diet">
-            <div class="topic">
-                DIET
-            </div>
-            <div class = "offers">
-                <div class="option">
-                    <div class="lightenBorder">
-                        <div class="firstHalf">
-                            <div class="heading">STANDARD</div>
-                            <div class="cost"></div>
-                            <div class="duration">Per Month</div>
-                        </div>
-                        <div class="slant"></div>
-                        <div class="paddingSpace"></div>
-                        <div class="secondHalf"></div>
+
+    <div class="scroll-to-top">
+        <button onclick="scrollToTop()" id="scroll-btn">
+            <i class="fa fa-angle-up fa-2x"></i>
+        </button>
+    </div>
+
+    <hr>
+
+    <!-- <div class="diet">
+        <div class="topic">
+            DIET
+        </div>
+        <div class="offers">
+            <div class="option">
+                <div class="lightenBorder">
+                    <div class="firstHalf">
+                        <div class="heading">STANDARD</div>
+                        <div class="cost"></div>
+                        <div class="duration">Per Month</div>
                     </div>
-                </div>
-                <div class="option">
-                    <div class="darken">
-                        <div class="firstHalf">
-                            <div class="heading">PREMIUM</div>
-                            <div class="cost"></div>
-                            <div class="duration">Per Month</div>
-                        </div>
-                        <div class="midSpace"></div>
-                        <div class="secondHalf"></div>
-                    </div>
-                </div>
-                <div class="option">
-                    <div class="lightenBorder">    
-                        <div class="firstHalf">
-                            <div class="heading">EXPERT</div>
-                            <div class="cost"></div>
-                            <div class="duration">Per Month</div>
-                        </div>
-                        <div class="slant"></div>
-                        <div class="paddingSpace"></div>
-                        <div class="secondHalf"></div>
-                    </div>
+                    <div class="slant"></div>
+                    <div class="paddingSpace"></div>
+                    <div class="secondHalf"></div>
                 </div>
             </div>
+            <div class="option">
+                <div class="darken">
+                    <div class="firstHalf">
+                        <div class="heading">PREMIUM</div>
+                        <div class="cost"></div>
+                        <div class="duration">Per Month</div>
+                    </div>
+                    <div class="midSpace"></div>
+                    <div class="secondHalf"></div>
+                </div>
+            </div>
+            <div class="option">
+                <div class="lightenBorder">
+                    <div class="firstHalf">
+                        <div class="heading">EXPERT</div>
+                        <div class="cost"></div>
+                        <div class="duration">Per Month</div>
+                    </div>
+                    <div class="slant"></div>
+                    <div class="paddingSpace"></div>
+                    <div class="secondHalf"></div>
+                </div>
+            </div>
         </div>
+    </div> -->
 
-        <div class="footer">
-            <footer>
-                <div class="social-media">
-                    <div class="sm-icons">
-                        <!-- <i class="fas fa-thumbs-up fa-5x"></i> -->
-                        <i class="fa fa-facebook fa-2x"></i>
-                        <i class="fa fa-google-plus fa-2x"></i>
-                        <i class="fa fa-twitter fa-2x"></i>
-                        <i class="fa fa-youtube fa-2x"></i>
-                        <i class="fa fa-instagram fa-2x"></i>
-                        <i class="fa fa-linkedin fa-2x"></i>
-                    </div>
+    <div class="footer">
+        <footer>
+            <div class="social-media">
+                <div class="sm-icons">
+                    <!-- <i class="fas fa-thumbs-up fa-5x"></i> -->
+                    <i class="fa fa-facebook fa-2x"></i>
+                    <i class="fa fa-google-plus fa-2x"></i>
+                    <i class="fa fa-twitter fa-2x"></i>
+                    <i class="fa fa-youtube fa-2x"></i>
+                    <i class="fa fa-instagram fa-2x"></i>
+                    <i class="fa fa-linkedin fa-2x"></i>
                 </div>
-                <div class="address">
-                    4043 N RAVENSWOOD AVE, SUIT 316, CHINA MALL, ACCRA | 03025478596
+            </div>
+            <div class="address">
+                4043 N RAVENSWOOD AVE, SUIT 316, CHINA MALL, ACCRA | 03025478596
+            </div>
+            <hr style="border: 1px solid #7676762b; width: 60%">
+
+            <div class="footer-details">
+                <div class="about-footer">
+                    <p>FAQ</p>
+                    <p>Polices</p>
+                    <p>Privacy Policy</p>
+                    <p>Referral Program</p>
                 </div>
-                <hr style="border: 1px solid #7676762b; width: 60%">
-    
-                <div class="footer-details">
-                    <div class="about-footer">
-                        <p>FAQ</p>
-                        <p>Polices</p>
-                        <p>Privacy Policy</p>
-                        <p>Referral Program</p>
-                    </div>
-    
-                    <div class="comment-box">
-                        <form action="">
-                            <div class="input-container">
-                                <input type="text" placeholder="Name"><br>
-                            </div>
-                            <div class="input-container">
-                                <input type="text" name="" placeholder="Email"><br>
-                            </div>
-                            <div class="input-container">
-                                <textarea name="" id="" cols="30" rows="10"></textarea><br>
-                            </div>
-                            <div class="submitBtn">
-                                <input type="submit" id="submit-btn">
-                            </div>
-    
-                        </form>
-                    </div>
-                    <div class="working-hours">
-                        <h4>Opening Hours</h4>
-                        <p>Mon: 5:30 am – 9:30 pm</p>
-                        <p>Tue: 5:30 am – 9:30 pm</p>
-                        <p>Wed: 5:30 am – 9:30 pm</p>
-                        <p>Thu: 5:30 am – 9:30 pm</p>
-                        <p>Fri: 5:30 am – 9:30 pm</p>
-                        <p>Sat: 8:00 am – 5:00 pm</p>
-                        <p>Sun: 10:00 am – 5:00 pm</p>
-                    </div>
+
+                <div class="comment-box">
+                    <form action="">
+                        <div class="input-container">
+                            <input type="text" placeholder="Name"><br>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" name="" placeholder="Email"><br>
+                        </div>
+                        <div class="input-container">
+                            <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                        </div>
+                        <div class="submitBtn">
+                            <input type="submit" id="submit-btn">
+                        </div>
+
+                    </form>
                 </div>
-            </footer>
-        </div>
-        <script src="index.js"></script>
-        <script src="../../root/root.js"></script>
-    </body>
+                <div class="working-hours">
+                    <h4>Opening Hours</h4>
+                    <p>Mon: 5:30 am – 9:30 pm</p>
+                    <p>Tue: 5:30 am – 9:30 pm</p>
+                    <p>Wed: 5:30 am – 9:30 pm</p>
+                    <p>Thu: 5:30 am – 9:30 pm</p>
+                    <p>Fri: 5:30 am – 9:30 pm</p>
+                    <p>Sat: 8:00 am – 5:00 pm</p>
+                    <p>Sun: 10:00 am – 5:00 pm</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+    <script src="../../root/root.js"></script>
+</body>
+
 </html>
