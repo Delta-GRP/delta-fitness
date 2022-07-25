@@ -1,0 +1,219 @@
+@import url(../../../root/root.css);
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #f63c25;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: grey;
+}
+
+
+hr{
+    margin: 25px auto;
+    border-color: #cccccc3f;
+}
+
+.app-logo img{
+    width: 350px;
+    height: 200px;
+    cursor: pointer;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin-bottom: 20px;
+    
+}
+
+.progressbar::before, .progress{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdedc;
+    z-index: -1;
+}
+
+.progress{
+    background-color: var(--primary-color);
+    width: 0;
+    transition: 0.5s;
+}
+
+.progress-step{
+    width: 35px;
+    height: 35px;
+    background-color: #dcdedc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+
+}
+
+
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+}
+ 
+.progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% * 0.95);
+    font-size: 0.85rem;
+    color: #dddddd;
+}
+
+.progress-step-active{
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.9s;
+}
+
+
+.page-section-container{
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+
+/*Global */
+#highlight{
+    color: var(--primary-color);
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.width-50{
+    width: 50%;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+ input, select{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    outline: none;
+    font-family: 'Poppins';
+ }
+
+ select{
+    padding-right: 135px;
+ }
+
+ input:focus{
+    border-color: var(--primary-color);
+ }
+
+/* Form */
+.center-container{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 0.35rem;
+    /* border: 1px solid #ccc; */
+    padding: 1.5rem;
+    /* z-index: -1; */
+    /* background-color: white; */
+
+}
+
+.form{
+    /* width: clamp(320px, 30%, 430px); */
+    margin: 0 auto;
+    border-radius: 0.35rem;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+label {
+    color: #5e5e5e;
+}
+
+.title{
+    text-transform: uppercase;
+}
+
+#price{
+    font-weight: bold;
+    padding: 5px 3px;
+}
+
+.form-step{
+    display: none;
+}
+
+
+
+.form-step-active{
+    display: block;
+}
+
+.form-step .contents{
+    text-align: center;
+    font-size: 22px;
+}
+
+.form-step .contents #offers{
+   padding-bottom: 30px;
+}
+
+.form-step .row1,.form-step .row2,.form-step .row3{
+    display: inline-block;
+}
+.input-group{
+   margin: 1rem 1rem; 
+}
+
+.btns-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+.btn{
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px var(--primary-color);
+}
+

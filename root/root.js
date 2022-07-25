@@ -1,4 +1,5 @@
 const activePage = window.location.pathname;
+console.log(activePage)
 const navLinks = document.querySelectorAll(".tab .tab-contents li a" ).
 forEach(link => {
     if(link.href.includes(`${activePage}`)){
@@ -6,7 +7,7 @@ forEach(link => {
     }
 });
 
-var scrollBtn = document.querySelector('scroll-btn');
+var scrollBtn = document.querySelector('#scroll-btn');
 
 var rootElement = document.documentElement;
 window.onscroll = function () { showScrollBtn() }

@@ -1,8 +1,9 @@
+
 .signin-content{
     /* background-color: #6bdbfd; */
     display: flex;
     justify-content :center;
-    font-family: 'Montserrat ExtraLight';
+    /* font-family: 'Montserrat ExtraLight'; */
 }
 
 .container{
@@ -50,7 +51,7 @@
     border: none;
     border-radius: 3px;
     box-shadow: 1px 1px 3px #060606;
-    font-family: 'Montserrat ExtraLight'
+    /* font-family: 'Montserrat ExtraLight' */
     
 
 }
@@ -125,7 +126,7 @@
     padding: 10px;
     outline: none;
     border: 1px solid #333;
-    font-family: 'Montserrat ExtraLight';
+    /* font-family: 'Montserrat ExtraLight'; */
     border-radius: 3px;
 
 }
@@ -136,7 +137,7 @@
     color: white;
     max-width: 100px;
     cursor: pointer;
-    font-family: 'Montserrat ExtraLight';
+    /* font-family: 'Montserrat ExtraLight'; */
     box-shadow: 1px 1px 3px #595959 ;
     border-radius: 2px;
 }
