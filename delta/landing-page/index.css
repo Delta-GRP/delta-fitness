@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+@import url("../../root/root.css");
 @import url("sign-up.css");
 
 html {
@@ -7,7 +9,6 @@ html {
 body {
     margin: 0;
     background-color: #000000;
-    font-family: 'Montserrat ExtraLight';
     color: white;
 }
 
@@ -41,11 +42,12 @@ ul li {
 
 li a {
     font-size: 22px;
+    /* font-weight: 400; */
     text-decoration: none;
     display: inline-block;
     color: #ffffff;
     text-align: center;
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: #000000;
 }
 
@@ -217,6 +219,8 @@ li a:hover {
     bottom: 30%;
     text-align: start;
     font-weight: bolder;
+    font-family: 'Noto Serif', serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .cover1 .text {
@@ -231,6 +235,7 @@ li a:hover {
     bottom: 30%;
     text-align: center;
     font-weight: bolder;
+    font-family: 'Noto Serif', serif;
 }
 
 .cover2 .text {
@@ -245,6 +250,7 @@ li a:hover {
     bottom: 30%;
     text-align: center;
     font-weight: bolder;
+    font-family: 'Noto Serif', serif;
 }
 
 
@@ -701,13 +707,14 @@ footer{
 }
 
 .social-media i {
-    color: white;
+    color: #ffffffd6;
     padding: 0px 8px;
     cursor: pointer;
 }
 
 .social-media .sm-icons i:hover {
-    box-shadow: 1px 1px 3px white;
+    color: white;
+    box-shadow: 1px 1px 3px #26262647;
     padding: 2px 10px;
     transition: all 0.2s ease-in-out;
 }

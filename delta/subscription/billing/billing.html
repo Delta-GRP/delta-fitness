@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Delta Fitness Studio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="billing.css">
+</head>
+
+<body>
+    <div class="app-logo">
+        <img src="../assets/deltafitnessstudio.png" alt="">
+    </div>
+    <div class="center-container">
+        <div class="center">
+            <!-- progress bar -->
+            <div class="progressbar">
+                <div class="progress" id="progress"></div>
+                <div class="progress-step progress-step-active" data-title="Plan"></div>
+                <div class="progress-step" data-title="Information"></div>
+                <div class="progress-step" data-title="Payment"></div>
+                <div class="progress-step" data-title="Checkout"></div>
+            </div>
+            <div class="page-section-container">
+                <form action="" class="form">
+                    <!-- steps -->
+                    <!-- plan -->
+                    <div class="form-step form-step-active">
+                        <div class="contents">
+                            <div class="title">
+                                <h2>You Chose <span id="offer-title"></span> Package </h2>
+                            </div>
+                            <div class="duration">
+                                Duration : Monthly
+                            </div>
+                            <div class="price-container">
+                                Price: <span id="price"></span>
+                            </div><br>
+                            <div class="title">
+                                <h2>Offers</h2>
+                            </div>
+                            <div id="offers"></div>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-next width-50 ml-auto">Proceed to Info</a>
+                        </div>
+                    </div>
+                    <!-- information -->
+                    <div class="form-step ">
+                        <div class="title">
+                            <h2>Tell Us A Little About Your Self</h2>
+                        </div>
+                        <section class="personal-info">
+                            <div class="form-title">
+                                Personal Info
+                            </div>
+                            <div class="input-group row1">
+                                <label for="fname">First Name<span id="highlight">*</span></label>
+                                <input type="text" name="fname" id="fname">
+                            </div>
+                            <div class="input-group row1">
+                                <label for="lname">Last Name<span id="highlight">*</span></label>
+                                <input type="text" name="lname" id="lname">
+                            </div><br>
+                            <div class="input-group row2">
+                                <label for="email">Email<span id="highlight">*</span></label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="input-group row2">
+                                <label for="phone">Phone<span id="highlight">*</span></label>
+                                <input type="number" name="phone" id="phone">
+                            </div><br>
+                            <div class="input-group row3">
+                                <label for="dob">Date Of Birth<span id="highlight">*</span></label>
+                                <input type="date" name="dob" id="dob">
+                            </div>
+                            <div class="input-group row3">
+                                <label for="gender">Gender<span id="highlight">*</span></label>
+                                <select name="gender">
+                                    <option value="male" selected >Male</option>
+                                    <option value="female">Female</option>                                </select>
+                            </div>
+                           
+                           
+                        </section>
+                        <section class="billing-address">
+                            <div class="form-title">
+                                Billing Info
+                            </div>
+                            <div class="input-group row1">
+                                <label for="address">Address<span id="highlight">*</span></label>
+                                <input type="text" name="address" id="username">
+                            </div>
+                            <div class="input-group row1">
+                                <label for="zip-code">Zip Code<span id="highlight">*</span></label>
+                                <input type="text" name="zip-code" placeholder="00233" id="zip-code">
+                            </div><br>
+                            <div class="input-group row2">
+                                <label for="state">State<span id="highlight">*</span></label>
+                                <input type="text" name="state" id="state">
+                            </div>
+                            <div class="input-group row2">
+                                <label for="city">City</label>
+                                <input type="text" name="city" id="city">
+                            </div><br>
+                        </section>
+                        <hr>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev ">Back</a>
+                            <a href="#" class="btn btn-next ">Proceed to Payment</a>
+                        </div>
+                    </div>
+                    <!-- payment -->
+                    <div class="form-step ">
+                        <div class="title">
+                            <h3>Enter Your Payment Details</h3>
+                        </div>
+                        <div class="input-group row1">
+                            <label for="fname">First Name<span id="highlight">*</span></label>
+                            <input type="text" required name="fname" id="fname">
+                        </div>
+                        <div class="input-group row1">
+                            <label for="fname">Last name<span id="highlight">*</span></label>
+                            <input type="text" required name="lname" id="lname">
+                        </div>
+                        <div class="input-group ">
+                            <label for="credit-card">Credit Card Number<span id="highlight">*</span></label>
+                            <input type="text" required name="credit-card" id="credit-card">
+                        </div>
+                        <div class="input-group">
+                            <label for="expiry-date">Expiration Date<span id="highlight">*</span></label>
+                            <input type="date" required name="expiry-date" id="expiry-date">
+                        </div>
+                        <div class="input-group row2">
+                            <label for="cvv">CVV<span id="highlight">*</span></label>
+                            <input type="text" name="cvv" id="cvv">
+                        </div>
+                        <div class="input-group row2">
+                            <label for="billing-zc">Billing Zip Code<span id="highlight">*</span></label>
+                            <input type="text" name="billing-zc" id="billing-zc">
+                        </div><br>
+                        <div class="input-group row3">
+                            <label for="accFname">Account Holder's <br> First Name<span id="highlight">*</span></label>
+                            <input type="text" required name="accFname" id="accFname">
+                        </div>
+                        <div class="input-group row3">
+                            <label for="accLame">Account Holder's <br> Last Name<span id="highlight">*</span></label>
+                            <input type="text" required name="accLname" id="accLname">
+                        </div><br>
+                        <div class="input-group row3">
+                            <label for="accNumber">Account Number<span id="highlight">*</span></label>
+                            <input type="number" required name="accNumber" id="accNumber">
+                        </div>
+                        <div class="input-group row3">
+                            <label for="accRoutingNumber">Account Routing <br> Number<span
+                                    id="highlight">*</span></label>
+                            <input type="number" required name="accRoutingNumber" id="accRoutingNumber">
+                        </div>
+                        <hr>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev ">Back</a>
+                            <a href="#" class="btn btn-next ">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                    <div class="form-step ">
+                        <div class="input-group">
+                            <label for="username">End</label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="input-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev ">Previous</a>
+                            <input type="submit" class="btn" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script type="module" src="billing.js" async defer></script>
+</body>
+
+</html>

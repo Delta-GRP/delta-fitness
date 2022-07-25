@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c9d22a1e3d.js" crossorigin="anonymous"></script>
     <script defer src="../../root/root.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="subscription.css">
     <!-- <link rel = "stylesheet" href = "../../github/delta-fitness-master/delta/landing-page/index.css"> -->
 </head>
 
@@ -21,7 +21,7 @@
         <div class="tab">
             <ul class="tab-contents">
                 <li><a target="_self" href="../landing-page/index.html">Home</a></li>
-                <li><a target="_self" href="index.html">Subscription</a></li>
+                <li><a target="_self" href="subscription.html">Subscription</a></li>
                 <!-- <li><a href="#">Training</a></li> -->
                 <li><a target="_self" href="../about/about.html">About</a></li>
             </ul>
@@ -103,8 +103,8 @@
                                 <div class="title">
                                     Standard
                                 </div>
-                                <div class="price">
-                                    $98
+                                <div class="price-container">
+                                    <span id="price1"></span>
                                 </div>
                                 <div class="package">
                                     Per Month
@@ -118,7 +118,7 @@
                            </div>
                         </section>
                         <section class="bottom">
-                            <button>Join Us</button>
+                            <button class="subs-btn" id="1">Join Us</button>
                         </section>
                     </div>
                 </div>
@@ -129,8 +129,8 @@
                                 <div class="title">
                                     Premium
                                 </div>
-                                <div class="price">
-                                    $199
+                                <div class="price-container">
+                                    <span id="price2"></span>
                                 </div>
                                 <div class="package">
                                     Per Month
@@ -144,7 +144,7 @@
                            </div>
                         </section>
                         <section class="bottom">
-                            <button>Join Us</button>
+                            <button class="subs-btn" id ="2">Join Us</button>
                         </section>
                     </div>
                 </div>
@@ -155,8 +155,8 @@
                                 <div class="title">
                                     Expert
                                 </div>
-                                <div class="price">
-                                    $295
+                                <div class="price-container">
+                                    <span id="price3"></span>
                                 </div>
                                 <div class="package">
                                     Per Month
@@ -170,7 +170,9 @@
                            </div>
                         </section>
                         <section class="bottom">
-                            <button>Join Us</button>
+                            <form target="_blank" action="">
+                                <button class="subs-btn" id="3" > Join Us</button>
+                            </form>
                         </section>
                     </div>
                 </div>
@@ -328,8 +330,8 @@
             </div>
         </footer>
     </div>
-    <script src="index.js"></script>
-    <script src="../../root/root.js"></script>
+    <script type="module" src="subscription.js"></script>
+    <script defer src="../../root/root.js"></script>
 </body>
 
 </html>
