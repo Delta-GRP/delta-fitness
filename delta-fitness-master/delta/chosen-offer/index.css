@@ -1,0 +1,104 @@
+/* body{
+    background-color: black;
+    color: white;
+} */
+
+.trainer-info-heading, .offer-info-heading{
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 5%;
+    font-weight: bolder;
+}
+
+.trainer-info{
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+.trainer-image{
+    width: 74%;
+    height: 81%;
+}
+
+.trainer-image-parent{
+    width: 50%;
+}
+
+.trainer-data{
+    width: 63%;
+    padding-left: 7%;
+    font-size: larger;
+}
+
+.trainer-data > div{
+    padding-bottom: 10%;
+}
+
+ .parent{
+	margin-left: 28%;
+	width: 42%;
+	border: 1px solid;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-right: 5%;
+}
+
+.available-perks{
+    padding-top: 2%;
+}
+
+.offer-info{
+    display: flex;
+}
+
+.offer-name{
+    text-transform: uppercase;
+    /* text-decoration: underline; */
+    text-align: center;
+    padding-bottom: 2%;
+    font-weight: bold;
+}
+
+.offer-type{
+    width: 50%;
+}
+
+.offer-start-end{
+    display: flex;
+    font-size: xx-small;
+}
+
+.offer-start{
+    width: 50%;
+}
+
+.offer-end{
+    width: 50%;
+    padding-left: 58%;
+}
+
+.offer-time-frame{
+    width: 50%;
+    padding-top: 5%;
+}
+
+.offer-time-frame-visual{
+    padding-top: 2%;
+}
+
+progress{
+    width: 95%;
+    border-color: white;
+    background-color: gray;
+}
+
+progress::-moz-progress-bar{ 
+    background: red; 
+}
+
+progress::-webkit-progress-value{ 
+    background: red; 
+}
+
