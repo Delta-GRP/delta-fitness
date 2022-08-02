@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="signup_form.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="signup_form.js"></script>
+    <title>Delta Fitness</title>
+</head>
+
+<body>
+   
+   <div class="app-logo-container">
+    <div class="app-logo">
+        <img src="../../../delta/landing-page/assets/deltafitnessstudiologo.png" alt="">
+    </div>
+    <div class="snackBar">
+        <ul id="form-messages"> </ul>
+    </div>
+   </div>
+    <div class="container">
+        <div class="redBg">
+            <div class="box signin">
+                <h2>Already Have an Account?</h2>
+                <button class="signinBtn">Sign In</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't Have an Account?</h2>
+                <button class="signupBtn">Sign Up</button>
+            </div>
+        </div>
+        <div class="formBox">
+            <div class="form signinForm">
+                <form action="">
+                    <h3>Sign In</h3>
+                    <input type="text" id="email1" required name="email" placeholder="Email">
+                    <input type="password" id="password1" required name="password" placeholder="Password">
+                    <input type="submit" value="Log In">
+                </form>
+            </div>
+
+            <div class="form signupForm">
+                <form action="">
+                    <h3>Sign Up</h3>
+                    <input type="text" id="firstName" name="firstName" required placeholder="First Name">
+                    <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                    <input type="password" id="passwordConfirmation" name="passwordConfirmation" required placeholder="Confirm Password">
+                    <input type="submit" id="signUpFormSubmitBtn" value="Register">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

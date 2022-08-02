@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
 @import url("../../root/root.css");
-@import url("sign-up.css");
+
 
 html {
     scroll-behavior: smooth;
@@ -106,6 +106,7 @@ li a:hover {
     border-color: #b60f00;
 }
 
+/*
 .black-overlay {
     display: none;
     position: fixed;
@@ -123,7 +124,7 @@ li a:hover {
 
 .close-btn i {
     float: right;
-    /* transform: translate(-98px, 48px); */
+    /* transform: translate(-98px, 48px); 
     position: absolute;
     right: 3%;
     top: 10%;
@@ -146,14 +147,14 @@ li a:hover {
 .signin-content {
     display: none;
     position: fixed;
-    /* top: 25%; */
+    /* top: 25%; *
     left: 12%;
     /* width: 50%; */
-    /* height: 50%; */
+    /* height: 50%; *
     padding: 16px;
     z-index: 1002;
     overflow: auto;
-}
+} */
 
 /* cover image */
 

@@ -1,0 +1,177 @@
+@import url('../../../root/root.css');
+:root{
+    --primary-color : #f63c25;
+}
+
+body{
+    background-color:  #f63c25ba;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content :center;
+}
+
+
+
+.app-logo-container{
+    display: flex;
+}
+
+.app-logo img{
+    width: 295px;
+    height: 97px;
+    cursor: pointer;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 13px;
+}
+
+
+ul {
+    color: red;
+    background-color: #ffe8e8;
+    display: none;
+    font-size: 12px;
+    padding: 10px 25px;
+    max-width: 250px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 5%;
+    border-radius: 4px;
+    box-shadow: 2px 2px 35px  red;
+    transition: 0.8s ease;
+    margin: 0 auto;
+
+}
+
+
+
+.container{
+    width: 800px;
+    height: 425px;
+    /* background-color: yellow; */
+    /* margin-top: 60px; */
+}
+
+.redBg{
+    top: 13px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff33;
+    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.redBg .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.redBg .box h2 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.redBg .box button{
+    font-family: 'Poppins';
+    cursor: pointer;
+    padding: 10px 20px;
+    background: white;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+
+.formBox{
+    position: relative;
+    /* top: 0; */
+    bottom: 409px;
+    left: 0;
+    width: 50%;
+    height: 105%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+
+
+.formBox.active {
+    left: 50%;
+}
+
+.formBox .signinForm{
+    transition-delay: 0.25s;
+}
+
+.formBox.active .signinForm {
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formBox .signupForm {
+    transition-delay: 0s;
+    left: 100%;
+}
+
+.formBox.active .signupForm {
+    left:0;
+    transition-delay: 0.25s;
+}
+
+.formBox .form{
+    position: absolute;
+    /* left: 0; */
+    width: 80%;
+    padding: 6%;
+    transition: 0.5s;
+}
+
+.formBox .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox .form form h3{
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.formBox .form form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.formBox .form form input[type="submit"]{
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    max-width: 100px;
+    cursor: pointer;
+}
+
