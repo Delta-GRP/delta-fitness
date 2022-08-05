@@ -1,20 +1,16 @@
 <?php
 
 declare(strict_types=1);
+require_once '../../partials/db_connect.php';
 
-#connecting to DB
-$conn = mysqli_connect('localhost', 'root', '', 'delta_fitness_db');
+$connectDatabase = new ConnectDatabase();
 
-if ($conn->connect_error) {
-    echo "Failed to connect: " . $conn->connect_error;
-}
+$conn = $connectDatabase->connect_db();
 
 $status = true;
 $messages = array();
 
-#getting user data from form
-
-$data = json_decode(file_get_contents('php://input'),true);
+$data = json_decode(file_get_contents('php://input'), true);
 $firstName = $data['firstName'];
 $lastName = $data['lastName'];
 $email = $data['email'];
@@ -23,9 +19,8 @@ $passwordConfirmation = $data['passwordConfirmation'];
 
 
 if (!isset($firstName) || empty($firstName)) {
-   
+
     $status = false;
-  //  $messages[] = 'from sever' + $firstName;
     $messages[] = 'User Field cannot be empty!';
 }
 if (!isset($lastName) || empty($lastName)) {
@@ -35,6 +30,13 @@ if (!isset($lastName) || empty($lastName)) {
 if (!isset($email) || empty($email)) {
     $status = false;
     $messages[] = 'User Email cannot be empty!';
+} else {
+    $fetchEmail = "SELECT Email FROM users where Email = '$email'";
+    $check_email = mysqli_query($conn, $fetchEmail);
+    if (mysqli_num_rows($check_email) > 0) {
+        $status = false;
+        $messages[] = 'Email Already exists';
+    }
 }
 if (!isset($password) || empty($password)) {
     $status = false;
@@ -49,16 +51,16 @@ if ($password == $passwordConfirmation) {
     $messages[] = 'Password mismatch';
 }
 
-if($status){
+if ($status) {
 
     $insertUserQuery = "INSERT INTO users (first_name, last_name, email, password) VALUE 
             ('$firstName', '$lastName', '$email', '$hashedPassword')";
     $result = mysqli_query($conn, $insertUserQuery);
-    
+
     if ($result) {
         $messages[] = 'User added successfully';
     } else {
-        $messages[] = 'Failed to add User';
+        $messages[] = 'Failed to add User!';
     }
 }
 
@@ -69,4 +71,4 @@ echo json_encode(
     )
 );
 
-mysqli_close($conn);
+$connectDatabase->close_connection();

@@ -28,31 +28,31 @@ function scrollToTop() {
     rootElement.scrollTop = 0;
 }
 
-function openSignInModal() {
-    document.getElementById("signin-modal").style.display = "block";
-    document.getElementById("signin-bg").style.display = "block";
-}
+// function openSignInModal() {
+//     document.getElementById("signin-modal").style.display = "block";
+//     document.getElementById("signin-bg").style.display = "block";
+// }
 
-function closeSignInModal() {
-    document.getElementById("signin-modal").style.display = "none";
-    document.getElementById("signin-bg").style.display = "none";
-}
+// function closeSignInModal() {
+//     document.getElementById("signin-modal").style.display = "none";
+//     document.getElementById("signin-bg").style.display = "none";
+// }
 
-const signinBtn = document.querySelector(".signinBtn");
-const signupBtn = document.querySelector(".signupBtn");
+// const signinBtn = document.querySelector(".signinBtn");
+// const signupBtn = document.querySelector(".signupBtn");
 
-const formBox = document.querySelector(".formBox");
-const closeBtn = document.querySelector("#closeBtn");
+// const formBox = document.querySelector(".formBox");
+// const closeBtn = document.querySelector("#closeBtn");
 
-signupBtn.onclick = function () {
-    formBox.classList.add("active");
+// signupBtn.onclick = function () {
+//     formBox.classList.add("active");
 
-    closeBtn.classList.add("btnColor");
-    // todo implement color change based on current 
-    // state of the form;
-}
+//     closeBtn.classList.add("btnColor");
+//     // todo implement color change based on current 
+//     // state of the form;
+// }
 
-signinBtn.onclick = function () {
-    formBox.classList.remove("active");
-    closeBtn.classList.remove("btnColor");
-}
+// signinBtn.onclick = function () {
+//     formBox.classList.remove("active");
+//     closeBtn.classList.remove("btnColor");
+// }
