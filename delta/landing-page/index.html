@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c9d22a1e3d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
     <script defer src="../../root/root.js"></script>
@@ -24,63 +25,28 @@
             </ul>
         </div>
 
-        <div class="sign-in">
-            <a  href="../../shared/signup/view/signup_form.html" target="_blank">Sign in</a>
+        <div class="actions-container">
+            <div class="user-profile" id="user-profile">
+                <i class="fa fa-user fa-2x" id="profile-icon"></i>
+                <div class="dropdown-content">
+                    <a href="">Account</a>
+                    <a href="">Logout</a>
+                </div>
+            </div>
+            <div class="sign-in" id="sign-in" >
+                <a  href="../../shared/authentication/view/signup/signup_form.html" target="_blank">Sign in</a>
+            </div>
         </div>
     </div>
-    <!-- <div class="sign-up-container">
-        <div id="signin-bg" class="black-overlay">
-
-        </div>
-        <div id="signin-modal" class="signin-content">
-            <div class="close-btn">
-                <i id="closeBtn" onclick="closeSignInModal()" class="fa fa-close fa-2x"></i>
-            </div>
-            <div class="container">
-                <div class="blueBg">
-                    <div class="box signin">
-                        <h2>Already Have an Account?</h2>
-                        <button class="signinBtn">Sign In</button>
-                    </div>
-                    <div class="box signup">
-                        <h2>Don't Have an Account?</h2>
-                        <button class="signupBtn">Sign Up</button>
-                    </div>
-                </div>
-                <div class="formBox">
-                    <div class="form signinForm">
-                        <form action="">
-                            <h3>Sign In</h3>
-                            <input type="text" placeholder="Email">
-                            <input type="password" placeholder="Password">
-                            <input type="submit" value="Log In">
-                        </form>
-                    </div>
-
-                    <div class="form signupForm">
-                        <form action="">
-                            <h3>Sign Up</h3>
-                            <input type="text" placeholder="First Name">
-                            <input type="text" placeholder="Last Name">
-                            <input type="text" placeholder="Email">
-                            <input type="password" placeholder="Password">
-                            <input type="submit" value="Register">
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div> -->
+   
     <div class="page-loading-bar"></div>
 
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="cover1">
-                <div class="text">
+                <!-- <div class="text">
                     <h1>Keep your <span id="essential">body</span> </h1> <h1>fit & strong</h1> 
-                </div>
+                </div> -->
             
             <div class="btn-container">
                 <div class="button">
@@ -88,12 +54,17 @@
                 </div>
             </div>
             </div>
-           <img src="./assets/cover1.jpg" style= "width: 100%;" alt="">
+            <div class="image-container">
+                <div class="text">
+                    <h1>Keep your <span id="essential">body</span> </h1> <h1>fit & strong</h1> 
+                </div>
+                <img src="./assets/cover1.jpg" style= "width: 100%;" alt="">
+            </div>
         </div>
         <div class="mySlides fade">
             <div class="cover2">
-                <div class="text"> <h1>Be <span id="essential">legendary </span></h1> <h1>challenge</h1>
-                </div>
+                <!-- <div class="text"> <h1>Be <span id="essential">legendary </span></h1> <h1>challenge</h1>
+                </div> -->
             
             <div class="btn-container">
                 <div class="button">
@@ -101,11 +72,15 @@
                 </div>
             </div>
             </div>
-            <img src="./assets/cover2.jpg" style= "width: 100%;" alt="">
+            <div class="image-container">
+                <div class="text"> <h1>Be <span id="essential">legendary </span></h1> <h1>challenge</h1>
+                </div>
+                <img src="./assets/cover2.jpg" style= "width: 100%;" alt="">
+            </div>
          </div>
          <div class="mySlides fade">
             <div class="cover3">
-                <div class="text"> <h1>Your Fitness is </h1><div id = "essential"><h1>essential</h1></div> </div>
+                <!-- <div class="text"> <h1>Your Fitness is </h1><div id = "essential"><h1>essential</h1></div> </div> -->
             
             <div class="btn-container">
                 <div class="button3">
@@ -113,7 +88,11 @@
                 </div>
             </div>
             </div>
-            <img src="./assets/cover3.jpg" style= "width: 100%;" alt="">
+            <div class="image-container">
+                <div class="text"> <h1>Your Fitness is </h1><div id = "essential"><h1>essential</h1></div> </div>
+
+                <img src="./assets/cover3.jpg" style= "width: 100%;" alt="">
+            </div>
             
          </div>
          <!-- Next and previous buttons -->
@@ -168,36 +147,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="our-trainers">
-        <p>Our Trainers</p>
-    </div>
-    <div class="trainers-container">
-        <div class="trainers-grid-container">
-            <div class="trainer1-grid-image"></div>
-            <div class="trainer-grid-name">
-                <h3>Sissy Train Dee</h3>
-            </div>
-        </div>
-        <div class="trainers-grid-container">
-            <div class="trainer2-grid-image"></div>
-            <div class="trainer-grid-name">
-                <h3>John Doe</h3>
-            </div>
-        </div>
-        <div class="trainers-grid-container">
-            <div class="trainer3-grid-image"></div>
-            <div class="trainer-grid-name">
-                <h3>James Sampson</h3>
-            </div>
-        </div>
-        <div class="trainers-grid-container">
-            <div class="trainer4-grid-image"></div>
-            <div class="trainer-grid-name">
-                <h3>Johnnih Endon</h3>
-            </div>
-        </div>
-    </div> -->
 
     <div class="scroll-to-top">
         <button onclick="scrollToTop()" id="scroll-btn">
