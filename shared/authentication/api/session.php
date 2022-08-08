@@ -1,9 +1,15 @@
 <?php
 
-ini_set('session.cookie_lifetime', 60 * 60 * 24 * 7);
-ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 7);
-ini_set('session.save_path', 'C:\xampp\htdocs\session');
-session_start();
+require_once '../../local_repository/session_cookies.cls.php';
+
+$sessionCookies = new SessionCookies();
+
+$sessionCookies->startSection();
+
+// ini_set('session.cookie_lifetime', 60 * 60 * 24 * 7);
+// ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 7);
+// ini_set('session.save_path', 'C:\xampp\htdocs\session');
+// session_start();
 
 $message = array();
 $status = true;
@@ -21,6 +27,5 @@ echo json_encode(
     array(
         "messages" => $message,
         "status" => $status,
-        "session" => $_SESSION['user_id'] ?? NULL
     )
 );

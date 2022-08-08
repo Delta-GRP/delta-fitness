@@ -1,23 +1,24 @@
 @import url('../../../../root/root.css');
-:root{
-    --primary-color : #f63c25;
+
+:root {
+    --primary-color: #f63c25;
 }
 
-body{
-    background-color:  #f63c25ba;
+body {
+    background-color: #f63c25ba;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content :center;
+    justify-content: center;
 }
 
 
 
-.app-logo-container{
+.app-logo-container {
     display: flex;
 }
 
-.app-logo img{
+.app-logo img {
     width: 295px;
     height: 97px;
     cursor: pointer;
@@ -41,7 +42,7 @@ ul {
     position: absolute;
     right: 5%;
     border-radius: 4px;
-    box-shadow: 2px 2px 35px  red;
+    box-shadow: 2px 2px 35px red;
     transition: 0.8s ease;
     margin: 0 auto;
 
@@ -49,14 +50,14 @@ ul {
 
 
 
-.container{
+.container {
     width: 800px;
     height: 425px;
     /* background-color: yellow; */
     /* margin-top: 60px; */
 }
 
-.redBg{
+.redBg {
     top: 13px;
     position: relative;
     display: flex;
@@ -68,7 +69,7 @@ ul {
     box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.15);
 }
 
-.redBg .box{
+.redBg .box {
     position: relative;
     width: 50%;
     height: 100%;
@@ -85,7 +86,7 @@ ul {
     margin-bottom: 10px;
 }
 
-.redBg .box button{
+.redBg .box button {
     font-family: 'Poppins';
     cursor: pointer;
     padding: 10px 20px;
@@ -96,7 +97,12 @@ ul {
     border: none;
 }
 
-.formBox{
+.redBg .box button:hover {
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    box-shadow: inset #e11313 2px 1px 5px 1px;
+}
+
+.formBox {
     position: relative;
     /* top: 0; */
     bottom: 409px;
@@ -119,7 +125,7 @@ ul {
     left: 50%;
 }
 
-.formBox .signinForm{
+.formBox .signinForm {
     transition-delay: 0.25s;
 }
 
@@ -134,11 +140,11 @@ ul {
 }
 
 .formBox.active .signupForm {
-    left:0;
+    left: 0;
     transition-delay: 0.25s;
 }
 
-.formBox .form{
+.formBox .form {
     position: absolute;
     /* left: 0; */
     width: 80%;
@@ -146,20 +152,20 @@ ul {
     transition: 0.5s;
 }
 
-.formBox .form form{
+.formBox .form form {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.formBox .form form h3{
+.formBox .form form h3 {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 20px;
     font-weight: 500;
 }
 
-.formBox .form form input{
+.formBox .form form input {
     width: 100%;
     margin-bottom: 20px;
     padding: 10px;
@@ -167,7 +173,7 @@ ul {
     border: 1px solid #333;
 }
 
-.formBox .form form input[type="submit"]{
+.formBox .form form input[type="submit"] {
     background-color: var(--primary-color);
     border: none;
     color: white;
@@ -175,3 +181,8 @@ ul {
     cursor: pointer;
 }
 
+.formBox .form form input[type="submit"]:hover {
+    transition: 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    box-shadow: 0 0 0 2px white, 0 0 0 3px var(--primary-color);
+
+}

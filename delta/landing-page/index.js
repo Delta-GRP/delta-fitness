@@ -1,10 +1,12 @@
 const sessionUrl = 'http://localhost/delta-fitness/shared/authentication/api/session.php';
+const logoutUrl = 'http://localhost/delta-fitness/shared/authentication/api/logout.php';
+
 const request = new XMLHttpRequest();
 
-function getSession(){
-    
+function loadSession() {
+
     request.onload = () => {
-    
+
         let responseObject = null;
 
         try {
@@ -18,45 +20,79 @@ function getSession(){
         if (responseObject) {
             handleResponse(responseObject);
         }
-    }
 
+    }
     request.open('get', sessionUrl, true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send();
+
 }
 
-function handleResponse(responseObject){
+function handleResponse(responseObject) {
 
-    const signIn= document.getElementById('sign-in');
-    const userProfile= document.getElementById('user-profile');
-
-    if(responseObject.status){
-        responseObject.messages.forEach(message =>{
+    const signIn = document.getElementById('sign-in');
+    const userProfile = document.getElementById('user-profile');
+    if (responseObject.status) {
+        responseObject.messages.forEach(message => {
             console.log(message);
-          })
+        })
         signIn.style.display = 'none';
         userProfile.style.display = 'block';
 
-    }else{
-        responseObject.messages.forEach(message=>{
-          console.log(message);
+    } else {
+        responseObject.messages.forEach(message => {
+            console.log(message);
         })
         signIn.style.display = 'block';
         userProfile.style.display = 'none';
     }
 }
 
- getSession();
+
+loadSession();
+
+
+
+
+
+document.getElementById('logout-btn').addEventListener('click', () => {
+    console.log('logout button pressed');
+    request.onload = () => {
+
+        let responseObject = null;
+
+        try {
+            responseObject = JSON.parse(request.responseText);
+
+        } catch {
+            console.error('Could not parse JSON!');
+        }
+
+
+        if (responseObject) {
+            if (responseObject.status) {
+                console.log('Logged out');
+            } else {
+                console.error('Failed to Logout');
+            }
+        }
+    }
+
+    request.open('get', logoutUrl, true);
+    request.setRequestHeader('Content-type', 'application/json');
+    request.send();
+});
+
 
 function slideInAnimation(start, end) {
-    var fadeInContainer = document.querySelector("."+start);
+    var fadeInContainer = document.querySelector("." + start);
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             entry.target.classList.toggle(end, entry.isIntersecting);
 
             if (entry.isIntersecting) {
                 console.log('intersecting...');
-                 observer.unobserve(entry.target);
+                observer.unobserve(entry.target);
             };
 
         })
@@ -79,21 +115,23 @@ let slideIndex = 0;
 
 showSlides();
 
-function showSlides(){
+function showSlides() {
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName('dot');
-    
-    for(let i = 0; i < slides.length; i++){
+
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex++;
-    if(slideIndex > slides.length){
+    if (slideIndex > slides.length) {
         slideIndex = 1;
     }
-    slides[slideIndex -1].style.display = "block";
+    slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 5000);
 
 }
+
+
 
 
 // $.ajax(
@@ -101,7 +139,7 @@ function showSlides(){
 //         type : 'GET',
 //         url : sessionUrl,
 //         headers: {
-//           'Content-Type': 'application/json', 
+//           'Content-Type': 'application/json',
 //         },
 //         success: function(responseObj) {
 //           if(responseObj.status){
