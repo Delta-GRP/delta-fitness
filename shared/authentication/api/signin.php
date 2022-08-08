@@ -3,16 +3,16 @@
 declare(strict_types=1);
 
 require_once '../../partials/db_connect.php';
-
-ini_set('session.cookie_lifetime', 60 * 60 * 24 * 7);
-ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 7);
-ini_set('session.save_path', 'C:\xampp\htdocs\session');
-session_start();
+require_once '../../local_repository/session_cookies.cls.php';
 
 
 $connectDatabase = new ConnectDatabase();
 
 $conn = $connectDatabase->connect_db();
+
+$sessionCookies = new SessionCookies();
+
+$sessionCookies->startSection();
 
 $status = true;
 $messages = array();
@@ -65,6 +65,7 @@ echo json_encode(
     array(
         'status' => $status,
         'messages' => $messages,
+        'session' => $_SESSION['user_id']
     )
 );
 

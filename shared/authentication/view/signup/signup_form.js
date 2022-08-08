@@ -1,7 +1,7 @@
 
-// const url = '../api/signup.php';
 const signupUrl = 'http://localhost/delta-fitness/shared/authentication/api/signup.php';
 const signinUrl = 'http://localhost/delta-fitness/shared/authentication/api/signin.php';
+const homeUrl = '../../../../delta/landing-page/index.html';
 const request = new XMLHttpRequest();
 
 const signinBtn = document.querySelector(".signinBtn");
@@ -43,7 +43,7 @@ document.getElementById('signUpFormSubmitBtn')
 
 
             if (responseObject) {
-                handleResponse(responseObject);
+                handleSignUpResponse(responseObject);
             }
         }
 
@@ -53,6 +53,43 @@ document.getElementById('signUpFormSubmitBtn')
 
 
     });
+
+    function handleSignUpResponse(responseObject) {
+        if(responseObject.status){
+            while(formMessages.firstChild){
+                formMessages.removeChild(formMessages.firstChild);
+            }
+            responseObject.messages.forEach(message => {
+                const li = document.createElement('li');
+                li.textContent = message;
+                formMessages.appendChild(li);
+            });
+            formMessages.style.color = ' #fdfdfd';
+            formMessages.style.boxShadow = '2px 2px 35px  #037803';
+            formMessages.style.backgroundColor = '#00ad2a';
+            formMessages.style.display = 'block';
+                
+            setTimeout(() =>{
+                formMessages.style.display = 'none';
+            }, 5000)
+        }else{
+            while(formMessages.firstChild){
+                formMessages.removeChild(formMessages.firstChild);
+            }
+            responseObject.messages.forEach(message => {
+                const li = document.createElement('li');
+                li.textContent = message;
+                formMessages.appendChild(li);
+            });
+    
+            formMessages.style.display = 'block';
+        
+            setTimeout(() =>{
+                formMessages.style.display = 'none';
+            }, 3000)
+           
+        }
+    }
 
 
 document.getElementById('login-btn').addEventListener('click',(e) =>{
@@ -74,7 +111,7 @@ document.getElementById('login-btn').addEventListener('click',(e) =>{
 
 
         if (responseObject) {
-            handleResponse(responseObject);
+            handleLoginResponse(responseObject);
         }
     }
 
@@ -83,14 +120,15 @@ document.getElementById('login-btn').addEventListener('click',(e) =>{
     request.send(JSON.stringify(form));
 });
 
-function handleResponse(responseObject) {
+function handleLoginResponse(responseObject) {
     if(responseObject.status){
+        console.log('before redirecting');
         console.log('Sign in success');
-       // window.location.href = '../../api/session.php';
+        window.location.replace(homeUrl);
+        console.log('after redirecting..');
     }else{
         while(formMessages.firstChild){
             formMessages.removeChild(formMessages.firstChild);
-
         }
         responseObject.messages.forEach(message => {
             const li = document.createElement('li');

@@ -58,7 +58,8 @@ if ($status) {
     $result = mysqli_query($conn, $insertUserQuery);
 
     if ($result) {
-        $messages[] = 'User added successfully';
+        $messages[] = 'User account created successfully';
+        $messages[] = 'Login to continue';
     } else {
         $messages[] = 'Failed to add User!';
     }
