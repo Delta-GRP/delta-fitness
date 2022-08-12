@@ -122,10 +122,7 @@ document.getElementById('login-btn').addEventListener('click',(e) =>{
 
 function handleLoginResponse(responseObject) {
     if(responseObject.status){
-        console.log('before redirecting');
-        console.log('Sign in success');
         window.location.replace(homeUrl);
-        console.log('after redirecting..');
     }else{
         while(formMessages.firstChild){
             formMessages.removeChild(formMessages.firstChild);
