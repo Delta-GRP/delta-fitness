@@ -14,6 +14,9 @@
     <div class="app-logo">
         <img src="../assets/deltafitnessstudio.png" alt="">
     </div>
+    <div class="snackBar">
+        <ul id="form-messages"> </ul>
+    </div>
     <div class="center-container">
         <div class="center">
             <!-- progress bar -->
@@ -79,7 +82,7 @@
                             </div>
                             <div class="input-group row3">
                                 <label for="gender">Gender<span id="highlight">*</span></label>
-                                <select name="gender">
+                                <select name="gender" id="gender">
                                     <option value="male" selected >Male</option>
                                     <option value="female">Female</option>                                </select>
                             </div>
@@ -92,7 +95,7 @@
                             </div>
                             <div class="input-group row1">
                                 <label for="address">Address<span id="highlight">*</span></label>
-                                <input type="text" name="address" id="username">
+                                <input type="text" name="address" id="address">
                             </div>
                             <div class="input-group row1">
                                 <label for="zip-code">Zip Code<span id="highlight">*</span></label>
@@ -106,6 +109,10 @@
                                 <label for="city">City</label>
                                 <input type="text" name="city" id="city">
                             </div><br>
+                            <div class="input-group">
+                                <label for="country">Country<span id="highlight">*</span></label>
+                                <input type="text" required name="country" id="country">
+                            </div>
                         </section>
                         <hr>
                         <div class="btns-group">
@@ -118,14 +125,14 @@
                         <div class="title">
                             <h3>Enter Your Payment Details</h3>
                         </div>
-                        <div class="input-group row1">
+                        <!-- <div class="input-group row1">
                             <label for="fname">First Name<span id="highlight">*</span></label>
                             <input type="text" required name="fname" id="fname">
                         </div>
                         <div class="input-group row1">
                             <label for="fname">Last name<span id="highlight">*</span></label>
                             <input type="text" required name="lname" id="lname">
-                        </div>
+                        </div> -->
                         <div class="input-group ">
                             <label for="credit-card">Credit Card Number<span id="highlight">*</span></label>
                             <input type="text" required name="credit-card" id="credit-card">
@@ -166,17 +173,74 @@
                         </div>
                     </div>
                     <div class="form-step ">
-                        <div class="input-group">
-                            <label for="username">End</label>
-                            <input type="text" name="username" id="username">
+                       <div class="checkout">
+                        <div class="details">
+                            <div class="info">
+                                Name: <span id="i-fname"></span> <span id="i-lname"></span>
+                            </div>
+                            <div class="info">
+                                Date: <span id="i-date"></span>
+                            </div>
+                            <div class="info">
+                                Email: <span id="i-email"></span>
+                            </div>
+                            <div class="info">
+                                Phone: <span id="i-phone"></span>
+                            </div>
+                            <div class="info">
+                                Address: <span id="i-address"></span>
+                            </div>
+                            <div class="info">
+                                Zip Code: <span id="i-zipcode"></span>
+                            </div>
+                            <div class="info">
+                                City: <span id="i-city"></span>
+                            </div>
+                            <div class="info">
+                                State: <span id="i-state"></span>
+                            </div>
+                            <div class="info">
+                                Credit Card: <span id="i-credit-card"></span>
+                            </div>
+                            <div class="info">
+                                Account Number: <span id="i-acc-number"></span>
+                            </div>
+                            <div class="info">
+                                Account Routing Number: <span id="i-acc-routing-number"></span>
+                            </div>
+                            <div class="info">
+                                CVV: <span id="i-cvv"></span>
+                            </div>
+                            <div class="info">
+                                Account Name: <span id="i-acc-fname"></span> <span id="i-acc-lname"></span>
+                            </div>
+                            <!-- <div class="info">
+                                Expiry: <span id="i-expiry"></span>
+                            </div> -->
                         </div>
-                        <div class="input-group">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" id="username">
+                        <div class="side-nav">
+                          <div class="side-nav-contents-container">
+                           <div class="side-nav-contents">
+                            <h2><span id="selected-offer"></span> Package</h2> 
+                            <div class="fees">
+                              <span>Enrollment Fee</span>  $<span id="enrollment-fee"></span>
+                            </div>
+                            <div class="fees">
+                              <span>Monthly Fee</span>  $<span id="monthly-fee"></span>
+                            </div>
+                            <div class="fees">
+                              <span>Annual Fee</span> $<span id="annual-fee"></span>
+                            </div>
+                            <div class="fees">
+                              <span>Total Due</span> $<span id="total"></span>
+                            </div>
+                           </div>
+                          </div>
                         </div>
+                       </div>
                         <div class="btns-group">
                             <a href="#" class="btn btn-prev ">Previous</a>
-                            <input type="submit" class="btn" value="Submit">
+                            <input type="submit" class="btn" id="submit" value="Submit">
                         </div>
                     </div>
                 </form>

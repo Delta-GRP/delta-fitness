@@ -1,5 +1,11 @@
 import {trainingBenefitList} from './offers.js';
 
+let request = new XMLHttpRequest();
+let isAuthenticated = false;
+
+let sessionUrl = '../../shared/authentication/api/session.php';
+let signinUrl = '../../shared/authentication/view/signup/signup_form.html';
+
 function getStandardOffers() {
     let price1 = document.getElementById('price1');
     let offers1 = document.getElementById('offers1');
@@ -78,10 +84,47 @@ function onOfferButtonClick(event) {
 window.addEventListener('click', onOfferButtonClick);
 
 function navigateToBillingPage(offerId) {
+
    var id= Number.parseInt(offerId);
     if(id > 0 || id < 4){
-        window.open(`billing/billing.html?id=${id}`, '_blank');
+        if(isAuthenticated){
+            window.open(`billing/billing.html?id=${id}`, '_blank');
+        } else{
+            window.open(signinUrl, '_self');
+        }
     }
 }
+
+function verifyUser(){
+    request.onload = () =>{
+       let responseObject = null;
+       try{
+         responseObject = JSON.parse(request.responseText);
+
+       }catch{
+        console.error('Could not parse JSON!');
+       }
+
+       if(responseObject){
+        handleResponse(responseObject);
+       }
+
+    }
+
+    request.open('get', sessionUrl, true);
+    request.setRequestHeader('Content-type', 'application/json');
+    request.send();
+
+}
+
+function handleResponse(responseObject){
+  if(responseObject.status){
+    isAuthenticated = true;
+  }else{
+    isAuthenticated = false;
+  }
+}
+
+verifyUser();
 
 
