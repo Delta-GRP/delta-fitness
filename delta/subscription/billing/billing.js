@@ -14,6 +14,7 @@ let request = new XMLHttpRequest();
 
 var selectedPrice = '';
 var selectedPackage = '';
+var totalCharge = 0;
 
 
 const prevBtns = document.querySelectorAll(".btn-prev");
@@ -154,7 +155,8 @@ document.getElementById('submit').addEventListener('click', (e) => {
         accHolderLastName: document.getElementById('accLname').value,
         accNumber: document.getElementById('accNumber').value,
         accRoutingNumber: document.getElementById('accRoutingNumber').value,
-        subscriptionId:  subscriptionId
+        subscriptionId:  subscriptionId,
+        total : totalCharge
     }
 
     request.onload = () => {
@@ -305,10 +307,8 @@ offer.innerHTML = selectedPackage.toUpperCase();
 enrollmentFee.innerHTML = 28;
 monthlyFee.innerHTML = selectedPrice;
 annualFee.innerHTML = 0.0;
-//let enrollment = parseFloat(enrollmentFee.value);
-//let monthly =  parseFloat(monthlyFee.value)
-//let annual = parseFloat(annualFee.value);
-totalDue.innerHTML = 28 + parseFloat(selectedPrice) + 0.0;
+totalCharge = 28 + parseFloat(selectedPrice) + 0.0
+totalDue.innerHTML = totalCharge;
 
 
 

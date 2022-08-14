@@ -40,10 +40,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $accHolderLastName = $data['accHolderLastName'];
     $accNumber = $data['accNumber'];
     $accRoutingNumber = $data['accRoutingNumber'];
-     $subscriptionId = $data['subscriptionId'];
+    $subscriptionId = $data['subscriptionId'];
+    $total = $data['total'];
 
 
     if (!isset($subscriptionId) || empty($subscriptionId)) {
+        $status = false;
+    }
+    if (!isset($total) || empty($total)) {
         $status = false;
     }
     if (!isset($creditCardNumber) || empty($creditCardNumber)) {
