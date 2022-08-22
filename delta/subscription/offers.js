@@ -18,12 +18,24 @@ const trainingBenefitList = [
                 "isAvailable": true,
             },
             {
+                "name" : "Free Protein Shake",
+                "isAvailable" : true
+            },
+            {
                 "name": "24/7 Skilled Support",
                 "isAvailable": false,
             },
             {
+                "name" : "Daily Free Shopping Suggestions",
+                "isAvailable" : false
+            },
+            {
                 "name": "Free restroom",
                 "isAvailable": false,
+            },
+            {
+                "name" : "Personal Dietician",
+                "isAvailable" : false
             }
         ],
 
@@ -47,12 +59,24 @@ const trainingBenefitList = [
                 "isAvailable": true,
             },
             {
+                "name" : "Free Protein Shake",
+                "isAvailable" : true
+            },
+            {
                 "name": "24/7 Skilled Support",
                 "isAvailable": true,
             },
             {
+                "name" : "Daily Free Shopping Suggestions",
+                "isAvailable" : true
+            },
+            {
                 "name": "Free restroom",
                 "isAvailable": false,
+            },
+            {
+                "name" : "Personal Dietician",
+                "isAvailable" : false
             }
         ]
     },
@@ -75,12 +99,24 @@ const trainingBenefitList = [
                 "isAvailable": true,
             },
             {
+                "name" : "Free Protein Shake",
+                "isAvailable" : true
+            },
+            {
                 "name": "24/7 Skilled Support",
                 "isAvailable": true,
             },
             {
+                "name" : "Daily Free Shopping Suggestions",
+                "isAvailable" : true
+            },
+            {
                 "name": "Free restroom",
                 "isAvailable": true,
+            },
+            {
+                "name" : "Personal Dietician",
+                "isAvailable" : true
             }
         ]
     }
