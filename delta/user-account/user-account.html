@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delta Fitness Studio</title>
+    <script src="https://kit.fontawesome.com/c9d22a1e3d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="user-account.css">
+    <script src="user-accout-m.js" defer></script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="right-sidenav-container">
+            <div class="user-profile-pic">
+               <div class="profile-pic-container">
+                <label for="file">
+                    <i class="fa fa-user fa-4x" id="profile-icon"></i>
+                    <img id="image-output"></img>
+                    <input type="file" id="file" onchange="loadFile(event)" style="display: none" name="image" accept="image/gif,image/jpeg,image/jpg,image/png" multiple="" data-original-title="upload photos">
+                  </label>
+               </div>
+               <div id="user-full-name"></div>
+            </div>
+            <div class="other-options-container">
+               <a href="" class="profile">Profile</a>
+               <a href="" class="subscriptions">My Subscriptions</a>
+               <a href="" class="address">My Addresses</a>
+               <a href="" class="orders">My Orders</a>
+            </div>
+        </div>
+        <div class="body-container">
+            <div class="heading">
+                <h3>My Account</h3>
+                <i>View and Edit Your Personal Info Below</i>
+            </div>
+            <hr>
+            <div class="personal-info">
+                <div class="display-heading">
+                    <p>Display info</p>
+                    <div class="info">
+                        This name appears on all your transactions and records.
+                    </div>
+                </div>
+                <div class="display-name">
+                    <p>Display Name*</p>
+                    <div id="full-name"></div>
+                </div>
+                <br>
+                <hr>
+                <div class="bio-data">
+                    <div class="account-title">
+                        <p class="head">Account</p>
+                        <p class="info">
+                            Update and Edit your personal information.
+                        </p>
+                    </div>
+                    <div class="row1">
+                        <div class="personal personal-name">
+                            <p>First Name : </p><input readonly id="fname" type="text" class="first-name"></input>
+                        </div>
+                        <div class="personal personal-age">
+                            <p>Last Name : </p><input readonly id="lname" type="text" class="last-name"></input>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="personal personal-gender">
+                            <p>Email : </p><input readonly id="email" type="email" class="email"></input>
+                        </div>
+                        <div class="personal personal-phone">
+                            <p>Phone : </p><input readonly id="phone" type="text" class="phone"></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice">
+                    <i> Your login email cannot be changed.</i>
+                </div>
+            </div>
+            <!-- <div class="hr">
+                <hr>
+            </div>
+            <div class="heading">YOUR TRAINER</div>
+            <div class="trainer-info">
+                <div class="trainer-image-parent">
+                    <img class="trainer-image" src="" />
+                </div>
+                <div class="trainer-data">
+                    <div class="trainer-name">Name : </div>
+                    <div class="trainer-age">Age : </div>
+                    <div class="trainer-gender">Gender : </div>
+                </div>
+            </div>
+            <div class="hr">
+                <hr>
+            </div> -->
+            <!-- <div class="heading">YOUR OFFER</div>
+            <div class="offer-name"></div>
+            <div class="offer-info">
+                <div class="offer-type">
+                    <div class="perks">
+                        <b>PERKS</b>
+                    </div>
+                    <div class="offer-perks"></div>
+                </div>
+                <div class="offer-time-frame">
+                    <div class="offer-start-end">
+                        <div class="offer-start">start : </br></div>
+                        <div class="offer-end">end : </br></div>
+                    </div>
+                    <div class="offer-time-frame-visual">
+                        <progress max="30">
+    
+                        </progress>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+    <!-- <script src="user-account.js" type="module"></script> -->
+</body>
+
+</html>
