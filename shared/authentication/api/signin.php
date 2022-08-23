@@ -65,7 +65,7 @@ echo json_encode(
     array(
         'status' => $status,
         'messages' => $messages,
-        'session' => $_SESSION['user_id']
+       // 'session' => $_SESSION['user_id'] ?? NULL
     )
 );
 

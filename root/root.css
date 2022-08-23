@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+:root {
+    --primary-color: #f63c25;
+    --info-color: #3b3b99;
+}
+
 
 body {
     font-family: 'Poppins';

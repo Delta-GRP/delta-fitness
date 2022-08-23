@@ -34,6 +34,10 @@ if (isset($_SESSION['user_id'])) {
     echo json_encode(
         $user_credentials,
     );
+}else{
+    echo json_encode(
+        "Please sign in to continue."
+    );
 }
 
 
