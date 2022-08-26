@@ -1,0 +1,52 @@
+@import url("../profile/user-account.css");
+
+.subscription-info .no-data {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscription-info .no-data img {
+    width: 300px;
+}
+
+.subscription-info .no-data a {
+    text-decoration: none;
+    background: linear-gradient(45deg, #ff4e5a, transparent);
+    padding: 6px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.subscription-info .no-data a:hover {
+    box-shadow: 1px 1px 5px #9c27b0;
+}
+
+.data-table{
+    display: block;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+th,td {
+    padding: 6px 20px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #f44336;;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #e9ecef;
+}

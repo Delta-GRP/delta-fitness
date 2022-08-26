@@ -208,9 +208,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($userAddress) {
             $userAddressId = $userAddress['id'];
 
-            $insertPaymentQuery = "INSERT INTO user_payment(users_address_id, credit_card_number, expiry, cvv, billing_zipcode,
+            $insertPaymentQuery = "INSERT INTO user_payment(credential_id,users_address_id, credit_card_number, expiry, cvv, billing_zipcode,
             acc_holder_firstname, acc_holder_lastname, acc_number, acc_routing_number, subscription_id)
-            VALUE ('$userAddressId', '$creditCardNumber', '$expiryDate', '$cvv', '$billingZipCode', '$accHolderFirstName',
+            VALUE ('$userId,$userAddressId', '$creditCardNumber', '$expiryDate', '$cvv', '$billingZipCode', '$accHolderFirstName',
             '$accHolderLastName', '$accNumber', '$accRoutingNumber', '$subscriptionId')";
             $userPayment = mysqli_query($conn, $insertPaymentQuery);
             if ($userPayment) {

@@ -19,17 +19,17 @@ $userPayment = array();
 
 
 if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
-    $fetchPaymentQuery = "SELECT * FROM user_payment"; 
-    $res = mysqli_query($conn, $fetchPaymentQuery);
-    while($payment = mysqli_fetch_assoc($res)){
-      $userPayment[] = $payment;
-    }
-  
-    echo json_encode(
-            $userPayment,  
-    );
-}else{
+  $user_id = $_SESSION['user_id'];
+  $fetchPaymentQuery = "SELECT * FROM user_payment";
+  $res = mysqli_query($conn, $fetchPaymentQuery);
+  while ($payment = mysqli_fetch_assoc($res)) {
+    $userPayment[] = $payment;
+  }
+
+  echo json_encode(
+    $userPayment,
+  );
+} else {
   $message[] = "You need to sign in to continue";
   echo json_encode($message);
 }

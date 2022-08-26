@@ -38,7 +38,4 @@ if (isset($_SESSION['user_id'])) {
 echo json_encode($user);
 
 
-
-
-
 $connectDatabase->close_connection();
