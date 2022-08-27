@@ -1,5 +1,20 @@
 @import url("../profile/user-account.css");
 
+.notice{
+    background-color: lightblue;
+    font-weight: 500;
+    color: var(--info-color);
+    font-size: 15px;
+    padding: 6px;
+    text-align: center;
+    margin-block: 10px;
+}
+
+
+.subscription-info{
+    min-height: 300px;
+}
+
 .subscription-info .no-data {
     display: none;
     flex-direction: column;
@@ -50,3 +65,36 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
     background-color: #e9ecef;
 }
+
+.duration{
+    display: flex;
+    flex-direction: column;
+}
+
+.duration .countdown{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+.days, .hours, .mins, .secs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #f44336;
+    padding-inline: 13px;
+}
+
+.countdown .time{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#expired, #activate{
+    display: none;
+    margin-block: 10px;
+}
+
+
+

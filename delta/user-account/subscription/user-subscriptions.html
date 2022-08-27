@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,24 +11,27 @@
     <title>Delta Fitness Studio</title>
 
 </head>
+
 <body>
     <div class="profile-container">
         <div class="right-sidenav-container">
             <div class="user-profile-pic">
-               <div class="profile-pic-container">
-                <label for="file">
-                    <i class="fa fa-user fa-4x" id="profile-icon"></i>
-                    <img id="image-output"></img>
-                    <input type="file" id="file" onchange="loadFile(event)" style="display: none" name="image" accept="image/gif,image/jpeg,image/jpg,image/png" multiple="" data-original-title="upload photos">
-                  </label>
-               </div>
-               <div id="user-full-name"></div>
+                <div class="profile-pic-container">
+                    <label for="file">
+                        <i class="fa fa-user fa-4x" id="profile-icon"></i>
+                        <img id="image-output"></img>
+                        <input type="file" id="file" onchange="loadFile(event)" style="display: none" name="image"
+                            accept="image/gif,image/jpeg,image/jpg,image/png" multiple=""
+                            data-original-title="upload photos">
+                    </label>
+                </div>
+                <div id="user-full-name"></div>
             </div>
             <div class="other-options-container">
-               <a href="../profile/user-account.html" class="profile">Profile</a>
-               <a href="../subscription/user-subscriptions.html" class="subscriptions">My Subscriptions</a>
-               <a href="" class="address">My Addresses</a>
-               <a href="" class="orders">My Orders</a>
+                <a href="../profile/user-account.html" class="profile">Profile</a>
+                <a href="../subscription/user-subscriptions.html" class="subscriptions">My Subscriptions</a>
+                <a href="" class="address">My Addresses</a>
+                <a href="" class="orders">My Orders</a>
             </div>
         </div>
         <div class="body-container">
@@ -47,19 +51,53 @@
                 <div class="data-table" id="data-table">
                     <table>
                         <thead>
-                          <tr>
-                            <th> Date </th>
-                            <th> Plan</th>
-                            <th> Total (Ghs)</th>
-                          </tr>
+                            <tr>
+                                <th> Start Date </th>
+                                <th> Plan</th>
+                                <th> Total (Ghs)</th>
+                                <th> End Date</th>
+                            </tr>
                         </thead>
                         <tbody id="tbody"></tbody>
-                      </table>
-                    
+                    </table>
+                    <div class="duration">
+                        <div class="info">
+                            <p>Current plan ends in : </p>
+                        </div>
+                        <div class="countdown">
+                            <div class="days">
+                                <div class="time day">0</div>
+                                <div>Day</div>
+                            </div>
+                            <div class="hours">
+                                <div class="time hour">0</div>
+                                <div>Hour</div>
+                            </div>
+                            <div class="mins">
+                                <div class="time min">0</div>
+                                <div>Min</div>
+                            </div>
+                            <div class="secs">
+                                <div class="time sec">0</div>
+                                <div>Sec</div>
+                            </div>
+                        </div>
+                        <div class="notice">
+                            <i>Any other subscription overrides current subscription</i>
+                        </div>
+                        <div id="expired">
+                            Current subscription has expired. Please click select a <a id="new-plan" href="">plan</a>.
+                        </div>
+                        <div id="activate">
+                            You currently don't have an active plan. Please click select a <a id="new-plan" href="">plan</a>.
+                        </div>
+                    </div>
                 </div>
             </div>
+
            
         </div>
     </div>
 </body>
+
 </html>

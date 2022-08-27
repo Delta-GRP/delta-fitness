@@ -53,7 +53,7 @@ function handleResponse(response) {
 
     if (response) {
         response.forEach((resUser) => {
-            user = resUser;
+         
             if (existInDOM(fname) ? (fname.value = resUser.first_name) : "");
             if (existInDOM(lname) ? (lname.value = resUser.last_name) : "");
             if (existInDOM(email) ? (email.value = resUser.email) : "");
@@ -88,7 +88,9 @@ function getUserInfo() {
         }
 
         if (responseObject) {
+           
             responseObject.forEach((userInfo) => {
+                user = userInfo;
                 existInDOM(phone) ? phone.value = userInfo.phone : '';
             });
         }
